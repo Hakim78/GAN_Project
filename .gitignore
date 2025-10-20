@@ -1,0 +1,17 @@
+# Données volumineuses
+data/celeba/
+
+# Sorties générées
+outputs/generated_images/
+outputs/checkpoints/*.h5
+outputs/logs/
+
+# Environnement Python
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
