@@ -1,83 +1,119 @@
 """
 Chargement et prétraitement du dataset CelebA.
-Je m'assure que les images sont normalisées entre [-1, 1] pour fonctionner avec tanh.
+Images normalisées en [-1, 1] (compatible avec une sortie générateur en tanh).
 
-Justification des choix techniques :
-- Normalisation [-1, 1] : Compatible avec l'activation tanh du générateur Je m'assure que les images sont normalisées entre [-1, 1] pour fonctionner avec tanh.
-- Shuffle buffer 10000 : Valeur standard pour datasets de grande taille (prof utilise 60000 pour MNIST)
-- Prefetch AUTOTUNE : Optimisation TensorFlow pour charger les données en parallèle pendant l'entraînement
+Robustesse :
+- Recherche RÉCURSIVE des .jpg/.jpeg (gère les "double dossiers" type img_align_celeba/img_align_celeba).
+- Extensions insensibles à la casse (.jpg/.JPG/.jpeg/.JPEG).
+- Garde-fou : lève une erreur claire si 0 image détectée.
+- Pipeline tf.data optimisé : shuffle → map(parallèle) → batch → prefetch.
+
+Astuce : dans utils/config.py, gardez simplement
+    DATA_DIR = "data/celeba/img_align_celeba"
+Et créez un symlink si vos images sont ailleurs.
 """
 
-import tensorflow as tf
 import os
+import glob
+import tensorflow as tf
 from utils.config import *
 
-
-def preprocess_image(image_path):
+# ------------------------------------------------------------
+# Prétraitement d'une image
+# ------------------------------------------------------------
+def preprocess_image(image_path: tf.Tensor) -> tf.Tensor:
     """
-      Prétraite une image individuelle.
-    
-    Justifications :
-    - decode_jpeg : Format des images CelebA (178x218 initialement)
-    - resize bilinear : Méthode standard pour redimensionner sans perte de qualité majeure
-    - Normalisation (pixel - 127.5) / 127.5 : Transforme [0, 255] en [-1, 1]
-      Cette formule vient du code du prof (exemple MNIST et Pokemon)
-    
     Args:
-        image_path (str): Chemin vers l'image
-    
+        image_path (tf.Tensor): chemin (tf.string) vers une image .jpg/.jpeg
+
     Returns:
-        tf.Tensor: Image normalisée (IMG_SIZE, IMG_SIZE, 3)
+        tf.Tensor: image float32 (IMG_SIZE, IMG_SIZE, 3) dans [-1, 1]
     """
-    
-    # chargement de l'image depuis le fichier
-    image = tf.io.read_file(image_path)
-    
-    # décodage de l'image JPEG en tensor value betwen 0-255
-    image  = tf.image.decode_jpeg(image, channels=IMG_CHANNELS)
+    # 1) lecture binaire
+    image_bytes = tf.io.read_file(image_path)
 
-    # redimensionnement de l'image à la taille souhaitée (definie dans config.py) methode used bilinear method standard
-    image = tf.image.resize(image, [IMG_SIZE, IMG_SIZE])
+    # 2) décodage JPEG → uint8 [H, W, C] (C=IMG_CHANNELS)
+    image = tf.image.decode_jpeg(image_bytes, channels=IMG_CHANNELS)
 
-    # normalisation des pixels entre -1 et 1 l'activation tanh du générateur produit des valeurs dans [-1, 1] donc on normalise les images de la même manière
-    image = (image - 127.5) / 127.5
+    # 3) cast en float32 [0,1] puis resize
+    image = tf.image.convert_image_dtype(image, tf.float32)  # [0,1]
+    image = tf.image.resize(image, [IMG_SIZE, IMG_SIZE], method=tf.image.ResizeMethod.BILINEAR)
 
+    # 4) normalisation [0,1] → [-1,1]
+    image = (image * 2.0) - 1.0
     return image
 
-def load_celeba_dataset(data_dir=DATA_DIR, batch_size=BATCH_SIZE, img_size=IMG_SIZE):
-    """
-    Chargement du dataset CelebA depuis le dossier local
-    
-    Justifications des paramètres :
-    - batch_size=128 : Valeur standard pour GANs (prof utilise 256 pour MNIST, 64 pour Pokemon)
-      128 est un bon compromis entre vitesse et utilisation mémoire GPU
-    - shuffle_buffer=10000 Assez grand pour bien mélanger prof utilise 60000 pour MNIST qui a 60k images
-      10000 est environ 3-5% je pense du dataset CelebA qui lui à 200k img
-    - prefetch AUTOTUNE optimisation TensorFlow le dataset suivant se charge pendant l'entraînement
-    """
 
-    # je vérifie que le dossier de données existe
+# ------------------------------------------------------------
+# Chargement complet du dataset
+# ------------------------------------------------------------
+def load_celeba_dataset(
+    data_dir: str = DATA_DIR,
+    batch_size: int = BATCH_SIZE,
+    img_size: int = IMG_SIZE,           # non utilisé directement (IMG_SIZE vient de config)
+    shuffle_buffer: int = 10_000,
+    limit: int | None = None,           # pour smoke tests (ex: 1000)
+) -> tf.data.Dataset:
+    """
+    Args:
+        data_dir: dossier contenant *directement* ou *indirectement* les .jpg
+        batch_size: taille des batches
+        img_size: taille cible (64/128) — param global déjà utilisé par preprocess
+        shuffle_buffer: taille du buffer de mélange
+        limit: limiter le nb d'images (pour tests rapides)
+
+    Returns:
+        tf.data.Dataset prêt pour l'entraînement (batches de float32 en [-1,1]).
+    """
     if not os.path.exists(data_dir):
-        raise FileNotFoundError(f"Le dossier de données {data_dir} n'existe pas. Mec T sur d'avoir téléchargé et extrait CelebA ?")
-    
-    # Je récupère tous les chemins des images dans le dossier CelebA contient environ 202599 images au format .jpg
-    image_paths = [os.path.join(data_dir, fname) for fname in os.listdir(data_dir) if fname.endswith('.jpg')]
+        raise FileNotFoundError(
+            f"Le dossier de données n'existe pas : {data_dir}\n"
+            f"Astuce : créez un lien symbolique vers le dossier réel contenant les .jpg."
+        )
+
+    # Recherche récursive et tolérante à la casse
+    patterns = [
+        os.path.join(data_dir, "**", "*.jpg"),
+        os.path.join(data_dir, "**", "*.JPG"),
+        os.path.join(data_dir, "**", "*.jpeg"),
+        os.path.join(data_dir, "**", "*.JPEG"),
+    ]
+    image_paths: list[str] = []
+    for p in patterns:
+        image_paths.extend(glob.glob(p, recursive=True))
+    image_paths = sorted(set(image_paths))  # unique + tri
+
+    if len(image_paths) == 0:
+        raise FileNotFoundError(
+            "Aucune image .jpg/.jpeg trouvée.\n"
+            f"- data_dir = {data_dir}\n"
+            "- Cas fréquent : double dossier (img_align_celeba/img_align_celeba) "
+            "ou archive non extraite."
+        )
+
+    if limit is not None and limit > 0:
+        image_paths = image_paths[:limit]
 
     print(f"Je charge {len(image_paths)} images depuis {data_dir}")
-    
-    # la je crée un dataset TensorFlow à partir des chemins from_tensor_slices & crée un dataset où chaque élément est un chemin
-    dataset = tf.data.Dataset.from_tensor_slices(image_paths)
-    # ici ce passe le mappe de la fonction de prétraitement sur chaque image
-    dataset = dataset.map(preprocess_image, num_parallel_calls=tf.data.AUTOTUNE)
 
-    # Je mélange le dataset avec un buffer de 10000 images
-    dataset = dataset.shuffle(buffer_size=10000)
+    # Pipeline tf.data
+    ds = tf.data.Dataset.from_tensor_slices(tf.constant(image_paths, dtype=tf.string))
+    ds = ds.shuffle(buffer_size=min(shuffle_buffer, len(image_paths)), reshuffle_each_iteration=True)
+    ds = ds.map(preprocess_image, num_parallel_calls=tf.data.AUTOTUNE)
+    ds = ds.batch(batch_size, drop_remainder=True)
+    ds = ds.prefetch(tf.data.AUTOTUNE)
+    return ds
 
-    # Je crée des batches de taille batch_size
-    # drop_remainder=True assure que tous les batches ont exactement la même taille
-    dataset = dataset.batch(batch_size, drop_remainder=True)
 
-    # Je précharge les données pour optimiser la vitesse d'entraînement
-    dataset = dataset.prefetch(tf.data.AUTOTUNE)
-
-    return dataset
+# ------------------------------------------------------------
+# Smoke test (exécution directe)
+# ------------------------------------------------------------
+if __name__ == "__main__":
+    try:
+        dataset = load_celeba_dataset(limit=512)  # limite pour test rapide
+        for batch in dataset.take(1):
+            print("Batch shape :", batch.shape, "| dtype:", batch.dtype)
+            print("Min:", float(tf.reduce_min(batch).numpy()), "Max:", float(tf.reduce_max(batch).numpy()))
+        print("OK data loader.")
+    except Exception as e:
+        print("Erreur loader:", e)

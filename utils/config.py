@@ -4,7 +4,7 @@ Je modifie ce fichier pour ajuster mes hyperparamètres.
 """
 
 # Chemins
-DATA_DIR = 'data/celeba/img_align_celeba/'
+DATA_DIR = "data/celeba/img_align_celeba"
 OUTPUT_DIR = 'outputs/'
 CHECKPOINT_DIR = 'outputs/checkpoints/'
 GENERATED_DIR = 'outputs/generated_images/'
