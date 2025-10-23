@@ -32,11 +32,11 @@ def build_generator_attention(noise_dim=NOISE_DIM, img_size=IMG_SIZE, img_channe
     x = CBAM(ratio=8, kernel_size=7, name='cbam_1')(x)
 
     # Bloc 2 : 16x16x128 -> 32x32x64 + CBAM
-    x = layers.Dense(64, kernel_size=5, strides=2, padding='same',
+    x = layers.Conv2DTranspose(64, kernel_size=5, strides=2, padding='same',
                      use_bias=False, name='conv_transpose_2')(x)
     x = layers.BatchNormalization(name='bn_2')(x)
     x = layers.ReLU(name='relu_2')(x)
-    x = CBAM(ratio=8, kernel_size=7, name='cbam_2')
+    x = CBAM(ratio=8, kernel_size=7, name='cbam_2')(x)
 
     # BLOC 3: 32x32x64 -> 64x64x3 (pas de CBAM sur sortie)
     output = layers.Conv2DTranspose(img_channels, kernel_size=5, strides=2,
