@@ -30,6 +30,7 @@ def build_discriminator(img_size=IMG_SIZE, img_channels=IMG_CHANNELS):
         kernel_size=5,
         strides=2,
         padding='same',
+        kernel_initializer='he_normal',
         name='conv_1'
     )(image_input)
 
@@ -47,6 +48,7 @@ def build_discriminator(img_size=IMG_SIZE, img_channels=IMG_CHANNELS):
         kernel_size=5,
         strides=2,
         padding='same',
+        kernel_initializer='he_normal',
         name='conv_2'
     )(x)
 
@@ -61,6 +63,7 @@ def build_discriminator(img_size=IMG_SIZE, img_channels=IMG_CHANNELS):
         kernel_size=5,
         strides=2,
         padding='same',
+        kernel_initializer='he_normal',
         name='conv_3'
     )(x)
 
