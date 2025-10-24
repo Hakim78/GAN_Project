@@ -4,67 +4,124 @@ Je crée un CNN qui prend une image (64, 64, 3) et retourne une probabilité [0,
 """
 
 import tensorflow as tf
-from tensorflow.keras import layers, Model
+from tensorflow.keras import layers, Model, Input
 from utils.config import *
 
 def build_discriminator(img_size=IMG_SIZE, img_channels=IMG_CHANNELS):
     """
-    Construit le discriminateur.
-
-    Architecture inspirée du code du prof (exemple MNIST adapté) et du README:
-    - Conv2D(64, k=5, s=2)  → LeakyReLU(0.2) → Dropout(0.3)
-    - Conv2D(128, k=5, s=2) → LeakyReLU(0.2) → Dropout(0.3)
-    - Conv2D(256, k=5, s=2) → LeakyReLU(0.2) → Dropout(0.3)
-    - Flatten → Dense(1, sigmoid)
-
+    Construit le discriminateur du GAN
+    
+    Architecture inspirée du code du prof (exemple MNIST adapté).
+    
     Args:
-        img_size (int): Taille des images d'entrée (64)
+        img_size (int): Taille des images d'entrée
         img_channels (int): Nombre de canaux (3 pour RGB)
-
+    
     Returns:
-        tf.keras.Model: Discriminateur (non compilé, pour entraînement custom)
+        tf.keras.Model: Discriminateur compilé
     """
-    # Input layer (img_size, img_size, img_channels)
-    inp = layers.Input(shape=(img_size, img_size, img_channels), name="disc_input")
 
-    # Bloc 1
-    x = layers.Conv2D(64, kernel_size=5, strides=2, padding='same',
-                      kernel_initializer='he_normal', name='conv1')(inp)
-    x = layers.LeakyReLU(alpha=0.2, name='lrelu1')(x)
-    x = layers.Dropout(0.3, name='drop1')(x)
+    # je def l'entrée des images
+    image_input = Input(shape=(img_size, img_size, img_channels), name='image_input')
 
-    # Bloc 2
-    x = layers.Conv2D(128, kernel_size=5, strides=2, padding='same',
-                      kernel_initializer='he_normal', name='conv2')(x)
-    x = layers.LeakyReLU(alpha=0.2, name='lrelu2')(x)
-    x = layers.Dropout(0.3, name='drop2')(x)
+    # bloc 1 : Conv2D 64x64x3 -> 32x32x64
+    x = layers.Conv2D(
+        64,
+        kernel_size=5,
+        strides=2,
+        padding='same',
+        kernel_initializer='he_normal',
+        name='conv_1'
+    )(image_input)
 
-    # Bloc 3
-    x = layers.Conv2D(256, kernel_size=5, strides=2, padding='same',
-                      kernel_initializer='he_normal', name='conv3')(x)
-    x = layers.LeakyReLU(alpha=0.2, name='lrelu3')(x)
-    x = layers.Dropout(0.3, name='drop3')(x)
+    # shape after 
 
-    # Tête binaire
+    # j'applique LeakyReLU au lieu de relu afin de permettre au gradient négatif de passer
+    x = layers.LeakyReLU(alpha=0.2, name='leaky_relu_1')(x)
+
+    # j'évite l'overfitting avec du dropout
+    x = layers.Dropout(0.3, name='dropout_1')(x)
+
+    # bloc 2 : Conv2D 32x32x64 -> 16x16x128
+    x = layers.Conv2D(
+        128,
+        kernel_size=5,
+        strides=2,
+        padding='same',
+        kernel_initializer='he_normal',
+        name='conv_2'
+    )(x)
+
+    # shape after
+
+    x = layers.LeakyReLU(alpha=0.2, name='leaky_relu_2')(x)
+    x = layers.Dropout(0.3, name='dropout_2')(x)
+
+    # bloc 3 : Conv2D 16x16x128 -> 8x8x256
+    x = layers.Conv2D(
+        256,
+        kernel_size=5,
+        strides=2,
+        padding='same',
+        kernel_initializer='he_normal',
+        name='conv_3'
+    )(x)
+
+    # shape after
+
+    x = layers.LeakyReLU(alpha=0.2, name='leaky_relu_3')(x)
+    x = layers.Dropout(0.3, name='dropout_3')(x)
+
+    # flatten pour passer en fully connected
     x = layers.Flatten(name='flatten')(x)
-    out = layers.Dense(1, activation='sigmoid', name='prob')(x)
 
-    model = Model(inputs=inp, outputs=out, name='Discriminator')
+    # couche de sortie : 1 neurone avec activation sigmoid pour probabilité [0, 1]
+    output = layers.Dense(1, activation='sigmoid', name='output_dense')(x)
 
-    # On NE compile PAS ici pour laisser la boucle d'entraînement custom gérer
-    # les pertes/optimiseurs (train_gan.py).
-    return model
+    # je crée le modèle Keras
+    discriminator = Model(inputs=image_input, outputs=output, name='discriminator')
+
+    return discriminator
+
+#####  partie test ##### supp apres
 
 
 if __name__ == '__main__':
-    # Petit test rapide : shape + passage avant entraînement
+    # Test du discriminateur
     print("=== Test du discriminateur ===\n")
-    disc = build_discriminator()
-    disc.summary()
-
-    # Batch factice en [-1, 1] (comme les vraies images après normalisation)
-    dummy = tf.random.uniform([4, IMG_SIZE, IMG_SIZE, IMG_CHANNELS], minval=-1.0, maxval=1.0)
-    y = disc(dummy, training=False)
-    print("\nSortie du discriminateur (shape, min, max):",
-          y.shape, float(tf.reduce_min(y)), float(tf.reduce_max(y)))
+    
+    # Je crée le discriminateur
+    discriminator = build_discriminator()
+    
+    # J'affiche l'architecture
+    print("Architecture du discriminateur :")
+    discriminator.summary()
+    
+    # Je teste la discrimination sur une image factice
+    print("\n=== Test de discrimination ===")
+    
+    # Je crée une fausse image (bruit aléatoire normalisé [-1, 1])
+    fake_image = tf.random.normal([1, IMG_SIZE, IMG_SIZE, IMG_CHANNELS])
+    
+    # Je passe l'image dans le discriminateur
+    prediction = discriminator(fake_image, training=False)
+    
+    print(f"Shape de la prédiction : {prediction.shape}")
+    print(f"Probabilité que l'image soit vraie : {prediction.numpy()[0][0]:.4f}")
+    print(f"Probabilité que l'image soit fausse : {1 - prediction.numpy()[0][0]:.4f}")
+    
+    # Note : avant entraînement, la prédiction est aléatoire (environ 0.5)
+    # C'est normal, le discriminateur n'a pas encore appris
+    
+    print("\n=== Test avec un batch ===")
+    
+    # Je teste avec un batch de 5 images
+    batch_images = tf.random.normal([5, IMG_SIZE, IMG_SIZE, IMG_CHANNELS])
+    batch_predictions = discriminator(batch_images, training=False)
+    
+    print(f"Shape des prédictions : {batch_predictions.shape}")
+    print("Prédictions pour chaque image :")
+    for i, pred in enumerate(batch_predictions.numpy()):
+        print(f"  Image {i+1}: {pred[0]:.4f} (probabilité d'être vraie)")
+    
     print("\nTest terminé avec succès !")
