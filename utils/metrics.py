@@ -6,6 +6,7 @@ Le FID score sera ajouté en bonus.
 
 import numpy as np
 import tensorflow as tf
+from scipy import linalg
 from datetime import datetime
 
 def log_training_metrics(epoch, g_loss, d_loss, time_per_epoch=None):
@@ -202,6 +203,169 @@ def load_training_history(load_path='outputs/training_history.npz'):
     
     return g_losses, d_losses
 
+def load_inception_model():
+    """
+    loading inceptionV3 pré entrainer pour extractions des features
+    """
+    inception = tf.keras.applications.InceptionV3(
+        include_top=False,
+        pooling='avg',
+        input_shape=(299,299, 3)
+    )
+    return inception
+
+
+def preprocess_images_for_inception(images):
+    """
+    Prétraite images pour InceptionV3
+    """
+    # [-1, 1] -> [0, 1]
+    images = (images + 1.0) / 2.0
+    images = np.clip(images, 0, 1)
+
+    # resize 64x64 -> 299x299
+    images_resized = tf.image.resize(images, [299, 299])
+
+    return images_resized.numpy()
+
+def calculate_fid(real_images, fake_images, batch_size=50):
+    """
+    Calcule le Fréchet Inception Distance (FID).
+    
+    Formule :
+    FID = ||mu_real - mu_fake||^2 + Tr(Sigma_real + Sigma_fake - 2*sqrt(Sigma_real*Sigma_fake))
+    
+    Plus le score est BAS, meilleur est le générateur.
+    - FID < 10 : Excellent
+    - FID 10-50 : Bon
+    - FID > 100 : Mauvais
+    """
+    print("calcul FID en cours... soit patient")
+    print(f"   - Images réelles : {len(real_images)}")
+    print(f"   - Images générées : {len(fake_images)}")
+
+    # load inception
+    inception_model = load_inception_model()
+
+    # prétraitement des imgs
+    real_prep = preprocess_images_for_inception(real_images)
+    fake_prep = preprocess_images_for_inception(fake_images)
+
+     # Extraire features par batches
+    def get_features(images, model, batch_size):
+        features = []
+        num_batches = int(np.ceil(len(images) / batch_size))
+        
+        for i in range(num_batches):
+            batch = images[i*batch_size:(i+1)*batch_size]
+            feat = model.predict(batch, verbose=0)
+            features.append(feat)
+        
+        return np.concatenate(features, axis=0)
+    
+    print("Extraction features images réelles...")
+    real_features = get_features(real_prep, inception_model, batch_size)
+    
+    print("Extraction features images générées...")
+    fake_features = get_features(fake_prep, inception_model, batch_size)
+    
+    # Calculer statistiques
+    mu_real = np.mean(real_features, axis=0)
+    mu_fake = np.mean(fake_features, axis=0)
+    
+    sigma_real = np.cov(real_features, rowvar=False)
+    sigma_fake = np.cov(fake_features, rowvar=False)
+    
+    # Calculer FID
+    diff = mu_real - mu_fake
+    
+    # Produit des matrices de covariance
+    covmean, _ = linalg.sqrtm(sigma_real.dot(sigma_fake), disp=False)
+    
+    # Vérifier valeurs imaginaires (erreurs numériques)
+    if np.iscomplexobj(covmean):
+        covmean = covmean.real
+    
+    fid = diff.dot(diff) + np.trace(sigma_real + sigma_fake - 2 * covmean)
+    
+    return float(fid)
+
+def evaluate_generator_fid(generator, real_dataset, num_samples=1000, noise_dim=100):
+    """
+    Évalue un générateur GAN avec FID.
+    
+    Args:
+        generator : modèle générateur Keras
+        real_dataset : tf.data.Dataset avec images réelles
+        num_samples : nombre d'images pour calcul (1000 recommandé)
+        noise_dim : dimension vecteur latent
+    
+    Returns:
+        float : FID score
+    """
+    print(f"\nÉvaluation FID sur {num_samples} images...")
+    
+    # Récupérer images réelles
+    real_images = []
+    for batch in real_dataset:
+        real_images.append(batch.numpy())
+        if len(real_images) * batch.shape[0] >= num_samples:
+            break
+    
+    real_images = np.concatenate(real_images, axis=0)[:num_samples]
+    
+    # Générer images
+    print("Génération d'images...")
+    noise = np.random.normal(0, 1, (num_samples, noise_dim)).astype(np.float32)
+    fake_images = generator.predict(noise, batch_size=128, verbose=0)
+    
+    # Calculer FID
+    fid_score = calculate_fid(real_images, fake_images)
+    
+    print(f"FID Score : {fid_score:.2f}")
+    return fid_score
+
+
+def evaluate_ddpm_fid(unet_model, real_dataset, attributes_dict, num_samples=1000):
+    """
+    Évalue un modèle DDPM avec FID.
+    """
+    print(f"\nÉvaluation FID DDPM sur {num_samples} images...")
+    
+    # Importer fonction génération
+    from models.diffusion import generate_samples
+    from utils.attributes import sample_random_attributes
+    
+    # Récupérer images réelles
+    real_images = []
+    for batch, _ in real_dataset:
+        real_images.append(batch.numpy())
+        if len(real_images) * batch.shape[0] >= num_samples:
+            break
+    
+    real_images = np.concatenate(real_images, axis=0)[:num_samples]
+    
+    # Générer images (par batches de 16 pour mémoire)
+    print("Génération DDPM en cours (cela prend ~5 min)...")
+    fake_images = []
+    num_batches = num_samples // 16
+    
+    for i in range(num_batches):
+        attrs = sample_random_attributes(16)
+        attrs = tf.constant(attrs, dtype=tf.float32)
+        imgs = generate_samples(unet_model, 16, attrs)
+        fake_images.append(imgs.numpy())
+        
+        if (i+1) % 10 == 0:
+            print(f"  {(i+1)*16}/{num_samples} images générées...")
+    
+    fake_images = np.concatenate(fake_images, axis=0)
+    
+    # Calculer FID
+    fid_score = calculate_fid(real_images, fake_images)
+    
+    print(f" FID Score DDPM : {fid_score:.2f}")
+    return fid_score
 
 if __name__ == '__main__':
     # Test des fonctions de logging
