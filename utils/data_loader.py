@@ -16,6 +16,7 @@ Et créez un symlink si vos images sont ailleurs.
 import os
 import glob
 import tensorflow as tf
+import numpy as np
 from utils.config import *
 
 # ------------------------------------------------------------
@@ -104,6 +105,64 @@ def load_celeba_dataset(
     ds = ds.prefetch(tf.data.AUTOTUNE)
     return ds
 
+def load_celeba_with_attributes(
+    attributes_dict: dict,
+    data_dir: str = DATA_DIR,
+    batch_size: int = BATCH_SIZE,
+    shuffle_buffer: int = 10_000,
+    limit: int | None = None,
+) -> tf.data.Dataset:
+    """
+    Charge CelebA avec images ET attributs pour DDPM conditionnel.
+    """
+    if not os.path.exists(data_dir):
+        raise FileNotFoundError(f"Dossier non trouvé : {data_dir}")
+    
+    patterns = [
+        os.path.join(data_dir, "**", "*.jpg"),
+        os.path.join(data_dir, "**", "*.JPG"),
+    ]
+    image_paths: list[str] = []
+    for p in patterns:
+        image_paths.extend(glob.glob(p, recursive=True))
+    image_paths = sorted(set(image_paths))
+    
+    if len(image_paths) == 0:
+        raise FileNotFoundError(f"Aucune image trouvée dans {data_dir}")
+    
+    if limit is not None and limit > 0:
+        image_paths = image_paths[:limit]
+    
+    print(f"Chargement {len(image_paths)} images avec attributs")
+    
+    def load_image_and_attrs(img_path_tensor):
+        img_path = img_path_tensor.numpy().decode('utf-8')
+        img_bytes = tf.io.read_file(img_path)
+        img = tf.image.decode_jpeg(img_bytes, channels=IMG_CHANNELS)
+        img = tf.image.convert_image_dtype(img, tf.float32)
+        img = tf.image.resize(img, [IMG_SIZE, IMG_SIZE])
+        img = (img * 2.0) - 1.0
+        
+        img_name = os.path.basename(img_path)
+        attrs = attributes_dict.get(img_name, np.zeros(40, dtype=np.float32))
+        attrs = tf.constant(attrs, dtype=tf.float32)
+        
+        return img, attrs
+    
+    ds = tf.data.Dataset.from_tensor_slices(tf.constant(image_paths, dtype=tf.string))
+    ds = ds.shuffle(buffer_size=min(shuffle_buffer, len(image_paths)))
+    ds = ds.map(
+        lambda path: tf.py_function(load_image_and_attrs, [path], [tf.float32, tf.float32]),
+        num_parallel_calls=tf.data.AUTOTUNE
+    )
+    ds = ds.map(lambda img, attrs: (
+        tf.ensure_shape(img, [IMG_SIZE, IMG_SIZE, IMG_CHANNELS]),
+        tf.ensure_shape(attrs, [40])
+    ))
+    ds = ds.batch(batch_size, drop_remainder=True)
+    ds = ds.prefetch(tf.data.AUTOTUNE)
+    
+    return ds
 
 # ------------------------------------------------------------
 # Smoke test (exécution directe)
