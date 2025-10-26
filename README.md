@@ -115,7 +115,7 @@ L’interface intègre :
 | Membre | Rôle principal | Contributions |
 |--------|----------------|----------------|
 | **Hakim Djaalal** | Développeur & intégrateur IA | Implémentation des modèles (GAN, CBAM, DDPM), création de l’interface Streamlit, gestion du pipeline d’entraînement |
-| **Assia Oumri** | Data Scientist & analyste | Implémentation des modèles (GAN, CBAM, DDPM) |Préparation du dataset CelebA, expérimentation via notebooks, analyses comparatives et visualisation |
+| **Assia Oumri** | Data Scientist & analyste | Implémentation des modèles (GAN, CBAM, DDPM), Préparation du dataset CelebA, expérimentation via notebooks, analyses comparatives et visualisation |
 
 Cette collaboration a permis de croiser nos approches :  
 **technique (optimisation, scripts)** et **analytique (évaluation, visualisation)**.
