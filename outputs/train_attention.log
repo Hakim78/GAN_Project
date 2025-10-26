@@ -1,0 +1,14 @@
+Je charge 202599 images depuis data/celeba/img_align_celeba
+  step   100 | G 10.9046 | D 0.0057
+  step   200 | G 4.2383 | D 0.2870
+  step   300 | G 2.4718 | D 0.4760
+  step   400 | G 1.5202 | D 0.7570
+  step   500 | G 1.3805 | D 0.7458
+  step   600 | G 1.1433 | D 0.8681
+  step   700 | G 1.3767 | D 0.6961
+  step   800 | G 1.4310 | D 0.7817
+  step   900 | G 1.6716 | D 0.8022
+  step  1000 | G 2.7016 | D 0.8666
+  step  1100 | G 1.7356 | D 0.6633
+  step  1200 | G 1.6995 | D 0.6498
+  step  1300 | G 2.1416 | D 0.5491

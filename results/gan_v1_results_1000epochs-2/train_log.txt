@@ -1,0 +1,1151 @@
+Chargement du dataset CelebA...
+Je charge 202599 images depuis data/celeba/img_align_celeba/
+
+============================================================
+DÉMARRAGE DE L'ENTRAÎNEMENT DU GAN
+============================================================
+
+Créations des modèless
+Générateur : 2,733,507 paramètres
+Discriminateur : 1,045,633 paramètres
+
+Optimiseurs Adam :
+  - Générateur : lr=0.0001, beta_1=0.5, beta_2=0.999
+  - Discriminateur : lr=0.0002, beta_1=0.5, beta_2=0.999
+
+Configuration :
+  - Epochs : 1000
+  - Batch size : 128
+  - Image size : 64x64
+  - Noise dim : 100
+  - Save interval : 100
+
+============================================================
+DÉBUT DE L'ENTRAÎNEMENT
+============================================================
+
+Epoch 00001 |`G Loss: 0.7868 | D Loss: 1.2623 | Time: 22.87s
+Epoch 00002 |`G Loss: 1.4075 | D Loss: 0.6848 | Time: 18.18s
+Epoch 00003 |`G Loss: 1.9670 | D Loss: 0.6715 | Time: 18.21s
+Epoch 00004 |`G Loss: 2.1276 | D Loss: 0.7176 | Time: 18.35s
+Epoch 00005 |`G Loss: 1.5298 | D Loss: 0.8563 | Time: 18.31s
+Epoch 00006 |`G Loss: 2.1415 | D Loss: 0.9498 | Time: 18.38s
+Epoch 00007 |`G Loss: 1.9954 | D Loss: 0.8635 | Time: 18.38s
+Epoch 00008 |`G Loss: 1.9696 | D Loss: 0.8438 | Time: 18.34s
+Epoch 00009 |`G Loss: 1.5170 | D Loss: 0.9773 | Time: 18.39s
+Epoch 00010 |`G Loss: 1.1856 | D Loss: 0.8615 | Time: 18.37s
+Epoch 00011 |`G Loss: 1.1842 | D Loss: 0.9941 | Time: 18.32s
+Epoch 00012 |`G Loss: 1.5506 | D Loss: 0.9428 | Time: 18.39s
+Epoch 00013 |`G Loss: 1.9064 | D Loss: 0.8833 | Time: 18.41s
+Epoch 00014 |`G Loss: 1.7469 | D Loss: 1.0111 | Time: 18.36s
+Epoch 00015 |`G Loss: 1.5241 | D Loss: 0.9298 | Time: 18.39s
+Epoch 00016 |`G Loss: 1.7193 | D Loss: 1.0362 | Time: 18.33s
+Epoch 00017 |`G Loss: 1.5761 | D Loss: 0.8063 | Time: 18.29s
+Epoch 00018 |`G Loss: 1.6385 | D Loss: 0.9638 | Time: 18.37s
+Epoch 00019 |`G Loss: 1.3594 | D Loss: 1.0762 | Time: 18.38s
+Epoch 00020 |`G Loss: 1.4755 | D Loss: 0.9803 | Time: 18.33s
+Epoch 00021 |`G Loss: 2.1002 | D Loss: 0.9145 | Time: 18.19s
+Epoch 00022 |`G Loss: 1.7690 | D Loss: 1.0038 | Time: 18.16s
+Epoch 00023 |`G Loss: 1.5779 | D Loss: 0.9016 | Time: 18.26s
+Epoch 00024 |`G Loss: 1.6675 | D Loss: 0.8797 | Time: 18.38s
+Epoch 00025 |`G Loss: 1.6299 | D Loss: 0.8842 | Time: 19.30s
+Epoch 00026 |`G Loss: 1.8381 | D Loss: 0.9524 | Time: 19.84s
+Epoch 00027 |`G Loss: 1.6873 | D Loss: 1.0005 | Time: 19.88s
+Epoch 00028 |`G Loss: 1.7340 | D Loss: 0.9832 | Time: 18.49s
+Epoch 00029 |`G Loss: 1.3541 | D Loss: 0.9522 | Time: 18.34s
+Epoch 00030 |`G Loss: 1.6496 | D Loss: 0.8831 | Time: 18.45s
+Epoch 00031 |`G Loss: 1.1567 | D Loss: 0.9679 | Time: 18.42s
+Epoch 00032 |`G Loss: 1.4621 | D Loss: 1.0175 | Time: 18.32s
+Epoch 00033 |`G Loss: 1.3797 | D Loss: 0.9353 | Time: 18.41s
+Epoch 00034 |`G Loss: 1.5434 | D Loss: 0.8467 | Time: 18.38s
+Epoch 00035 |`G Loss: 1.9576 | D Loss: 0.8587 | Time: 18.49s
+Epoch 00036 |`G Loss: 1.6878 | D Loss: 0.9844 | Time: 18.37s
+Epoch 00037 |`G Loss: 1.4138 | D Loss: 0.9085 | Time: 18.49s
+Epoch 00038 |`G Loss: 1.9257 | D Loss: 1.0541 | Time: 18.41s
+Epoch 00039 |`G Loss: 1.4504 | D Loss: 0.9645 | Time: 18.35s
+Epoch 00040 |`G Loss: 1.6749 | D Loss: 1.1157 | Time: 18.35s
+Epoch 00041 |`G Loss: 1.7820 | D Loss: 0.7829 | Time: 18.31s
+Epoch 00042 |`G Loss: 1.7572 | D Loss: 1.0015 | Time: 18.36s
+Epoch 00043 |`G Loss: 1.8558 | D Loss: 0.8798 | Time: 18.41s
+Epoch 00044 |`G Loss: 1.3304 | D Loss: 1.4835 | Time: 18.27s
+Epoch 00045 |`G Loss: 1.2711 | D Loss: 0.9270 | Time: 18.34s
+Epoch 00046 |`G Loss: 1.6392 | D Loss: 0.7816 | Time: 18.33s
+Epoch 00047 |`G Loss: 1.8057 | D Loss: 0.8609 | Time: 18.38s
+Epoch 00048 |`G Loss: 1.9901 | D Loss: 0.8477 | Time: 18.36s
+Epoch 00049 |`G Loss: 1.5271 | D Loss: 0.7973 | Time: 18.30s
+Epoch 00050 |`G Loss: 1.4387 | D Loss: 0.8487 | Time: 18.36s
+Epoch 00051 |`G Loss: 1.8030 | D Loss: 1.0293 | Time: 18.36s
+Epoch 00052 |`G Loss: 2.0978 | D Loss: 0.8493 | Time: 18.26s
+Epoch 00053 |`G Loss: 1.5233 | D Loss: 0.9101 | Time: 18.44s
+Epoch 00054 |`G Loss: 1.8799 | D Loss: 0.7620 | Time: 18.39s
+Epoch 00055 |`G Loss: 1.4162 | D Loss: 0.8199 | Time: 18.29s
+Epoch 00056 |`G Loss: 2.0429 | D Loss: 0.8586 | Time: 18.28s
+Epoch 00057 |`G Loss: 1.7034 | D Loss: 0.8608 | Time: 18.39s
+Epoch 00058 |`G Loss: 1.9228 | D Loss: 0.7706 | Time: 18.33s
+Epoch 00059 |`G Loss: 1.5774 | D Loss: 0.8546 | Time: 18.37s
+Epoch 00060 |`G Loss: 2.4085 | D Loss: 0.8125 | Time: 18.44s
+Epoch 00061 |`G Loss: 1.9372 | D Loss: 0.7164 | Time: 18.28s
+Epoch 00062 |`G Loss: 2.0689 | D Loss: 0.8033 | Time: 18.35s
+Epoch 00063 |`G Loss: 2.1650 | D Loss: 0.8850 | Time: 18.35s
+Epoch 00064 |`G Loss: 1.9031 | D Loss: 0.7246 | Time: 18.40s
+Epoch 00065 |`G Loss: 2.5611 | D Loss: 0.9385 | Time: 18.58s
+Epoch 00066 |`G Loss: 1.9811 | D Loss: 0.5967 | Time: 18.90s
+Epoch 00067 |`G Loss: 1.2031 | D Loss: 0.9241 | Time: 18.78s
+Epoch 00068 |`G Loss: 1.8520 | D Loss: 0.7824 | Time: 18.87s
+Epoch 00069 |`G Loss: 1.8147 | D Loss: 0.6690 | Time: 18.41s
+Epoch 00070 |`G Loss: 2.3988 | D Loss: 0.7187 | Time: 18.43s
+Epoch 00071 |`G Loss: 1.7971 | D Loss: 0.8061 | Time: 18.38s
+Epoch 00072 |`G Loss: 2.6066 | D Loss: 0.7264 | Time: 18.49s
+Epoch 00073 |`G Loss: 2.2325 | D Loss: 0.6685 | Time: 18.45s
+Epoch 00074 |`G Loss: 2.2101 | D Loss: 0.6897 | Time: 18.40s
+Epoch 00075 |`G Loss: 2.0848 | D Loss: 0.8885 | Time: 18.64s
+Epoch 00076 |`G Loss: 2.0757 | D Loss: 0.5522 | Time: 18.63s
+Epoch 00077 |`G Loss: 2.5051 | D Loss: 0.5049 | Time: 18.44s
+Epoch 00078 |`G Loss: 3.0208 | D Loss: 0.7522 | Time: 19.39s
+Epoch 00079 |`G Loss: 2.1934 | D Loss: 0.5931 | Time: 19.91s
+Epoch 00080 |`G Loss: 2.3144 | D Loss: 0.8742 | Time: 19.05s
+Epoch 00081 |`G Loss: 3.0219 | D Loss: 0.6834 | Time: 18.37s
+Epoch 00082 |`G Loss: 2.4332 | D Loss: 0.5261 | Time: 18.29s
+Epoch 00083 |`G Loss: 2.3413 | D Loss: 0.5117 | Time: 18.48s
+Epoch 00084 |`G Loss: 0.9220 | D Loss: 1.4446 | Time: 18.46s
+Epoch 00085 |`G Loss: 2.2235 | D Loss: 0.6122 | Time: 18.57s
+Epoch 00086 |`G Loss: 2.1563 | D Loss: 0.6365 | Time: 18.31s
+Epoch 00087 |`G Loss: 2.5540 | D Loss: 0.4357 | Time: 18.37s
+Epoch 00088 |`G Loss: 2.6829 | D Loss: 0.6270 | Time: 18.37s
+Epoch 00089 |`G Loss: 3.4921 | D Loss: 0.5441 | Time: 18.91s
+Epoch 00090 |`G Loss: 3.4354 | D Loss: 0.5621 | Time: 18.36s
+Epoch 00091 |`G Loss: 2.4779 | D Loss: 0.7392 | Time: 19.21s
+Epoch 00092 |`G Loss: 2.8060 | D Loss: 0.5572 | Time: 19.17s
+Epoch 00093 |`G Loss: 2.6575 | D Loss: 0.5533 | Time: 18.38s
+Epoch 00094 |`G Loss: 2.7689 | D Loss: 0.3886 | Time: 18.14s
+Epoch 00095 |`G Loss: 2.9988 | D Loss: 0.5454 | Time: 18.31s
+Epoch 00096 |`G Loss: 2.8877 | D Loss: 0.4619 | Time: 18.34s
+Epoch 00097 |`G Loss: 2.4079 | D Loss: 0.5100 | Time: 18.41s
+Epoch 00098 |`G Loss: 2.7851 | D Loss: 0.5054 | Time: 18.47s
+Epoch 00099 |`G Loss: 3.7767 | D Loss: 0.3726 | Time: 18.80s
+Epoch 00100 |`G Loss: 3.1615 | D Loss: 0.6000 | Time: 18.50s
+
+============================================================
+SAUVEGARDE - Epoch 100
+============================================================
+Images générées sauvegardées
+============================================================
+
+/usr/local/lib/python3.11/dist-packages/keras/src/engine/training.py:3079: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
+  saving_api.save_model(
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 100)
+Epoch 00101 |`G Loss: 2.7039 | D Loss: 0.4401 | Time: 18.87s
+Epoch 00102 |`G Loss: 2.7593 | D Loss: 0.4397 | Time: 18.44s
+Epoch 00103 |`G Loss: 4.4210 | D Loss: 1.0609 | Time: 18.23s
+Epoch 00104 |`G Loss: 2.3974 | D Loss: 0.6112 | Time: 18.33s
+Epoch 00105 |`G Loss: 2.9944 | D Loss: 0.4605 | Time: 18.28s
+Epoch 00106 |`G Loss: 2.9765 | D Loss: 0.4320 | Time: 18.39s
+Epoch 00107 |`G Loss: 2.9343 | D Loss: 0.4703 | Time: 18.41s
+Epoch 00108 |`G Loss: 3.4393 | D Loss: 0.4381 | Time: 18.68s
+Epoch 00109 |`G Loss: 2.4493 | D Loss: 0.3582 | Time: 19.07s
+Epoch 00110 |`G Loss: 2.7827 | D Loss: 0.4125 | Time: 19.67s
+Epoch 00111 |`G Loss: 3.0368 | D Loss: 0.4056 | Time: 18.76s
+Epoch 00112 |`G Loss: 3.0116 | D Loss: 0.3200 | Time: 18.24s
+Epoch 00113 |`G Loss: 3.9895 | D Loss: 0.4073 | Time: 18.41s
+Epoch 00114 |`G Loss: 2.3626 | D Loss: 0.5060 | Time: 18.37s
+Epoch 00115 |`G Loss: 2.8441 | D Loss: 0.4553 | Time: 18.38s
+Epoch 00116 |`G Loss: 4.0964 | D Loss: 0.4491 | Time: 18.49s
+Epoch 00117 |`G Loss: 2.7219 | D Loss: 0.4584 | Time: 18.39s
+Epoch 00118 |`G Loss: 3.1344 | D Loss: 0.3617 | Time: 18.42s
+Epoch 00119 |`G Loss: 3.2686 | D Loss: 0.3900 | Time: 18.69s
+Epoch 00120 |`G Loss: 2.9723 | D Loss: 0.2712 | Time: 18.41s
+Epoch 00121 |`G Loss: 3.2896 | D Loss: 0.3815 | Time: 18.36s
+Epoch 00122 |`G Loss: 3.5194 | D Loss: 0.3689 | Time: 18.51s
+Epoch 00123 |`G Loss: 3.0815 | D Loss: 0.4202 | Time: 18.34s
+Epoch 00124 |`G Loss: 2.8889 | D Loss: 0.4047 | Time: 18.40s
+Epoch 00125 |`G Loss: 3.2850 | D Loss: 0.3632 | Time: 18.41s
+Epoch 00126 |`G Loss: 2.9483 | D Loss: 0.3970 | Time: 18.33s
+Epoch 00127 |`G Loss: 4.2947 | D Loss: 0.5103 | Time: 18.38s
+Epoch 00128 |`G Loss: 3.4168 | D Loss: 0.4079 | Time: 18.78s
+Epoch 00129 |`G Loss: 3.0275 | D Loss: 0.6680 | Time: 18.51s
+Epoch 00130 |`G Loss: 3.8987 | D Loss: 0.3405 | Time: 18.84s
+Epoch 00131 |`G Loss: 3.7793 | D Loss: 0.3855 | Time: 19.60s
+Epoch 00132 |`G Loss: 3.5839 | D Loss: 0.3614 | Time: 18.45s
+Epoch 00133 |`G Loss: 4.4504 | D Loss: 0.4083 | Time: 18.11s
+Epoch 00134 |`G Loss: 3.6367 | D Loss: 0.3896 | Time: 18.23s
+Epoch 00135 |`G Loss: 3.8150 | D Loss: 0.2895 | Time: 18.24s
+Epoch 00136 |`G Loss: 4.2211 | D Loss: 0.4130 | Time: 18.27s
+Epoch 00137 |`G Loss: 4.5201 | D Loss: 0.4072 | Time: 18.37s
+Epoch 00138 |`G Loss: 3.8646 | D Loss: 0.3967 | Time: 18.45s
+Epoch 00139 |`G Loss: 4.0385 | D Loss: 0.4159 | Time: 18.37s
+Epoch 00140 |`G Loss: 3.6037 | D Loss: 0.4336 | Time: 18.36s
+Epoch 00141 |`G Loss: 3.5151 | D Loss: 0.3072 | Time: 18.40s
+Epoch 00142 |`G Loss: 3.7548 | D Loss: 0.2254 | Time: 18.36s
+Epoch 00143 |`G Loss: 3.3971 | D Loss: 0.2366 | Time: 18.36s
+Epoch 00144 |`G Loss: 3.5121 | D Loss: 0.3264 | Time: 18.34s
+Epoch 00145 |`G Loss: 5.0198 | D Loss: 0.6656 | Time: 18.32s
+Epoch 00146 |`G Loss: 4.1200 | D Loss: 0.2934 | Time: 18.40s
+Epoch 00147 |`G Loss: 3.5084 | D Loss: 0.6014 | Time: 18.34s
+Epoch 00148 |`G Loss: 4.0696 | D Loss: 0.4235 | Time: 18.50s
+Epoch 00149 |`G Loss: 3.2210 | D Loss: 0.3197 | Time: 18.40s
+Epoch 00150 |`G Loss: 3.8470 | D Loss: 0.2612 | Time: 18.81s
+Epoch 00151 |`G Loss: 4.7547 | D Loss: 0.3563 | Time: 18.60s
+Epoch 00152 |`G Loss: 4.5646 | D Loss: 0.3857 | Time: 19.05s
+Epoch 00153 |`G Loss: 4.4490 | D Loss: 0.2809 | Time: 19.93s
+Epoch 00154 |`G Loss: 3.6354 | D Loss: 0.4372 | Time: 18.51s
+Epoch 00155 |`G Loss: 4.3661 | D Loss: 0.3122 | Time: 18.23s
+Epoch 00156 |`G Loss: 4.4478 | D Loss: 0.3311 | Time: 18.32s
+Epoch 00157 |`G Loss: 3.4805 | D Loss: 0.2866 | Time: 18.24s
+Epoch 00158 |`G Loss: 3.6217 | D Loss: 0.2779 | Time: 18.45s
+Epoch 00159 |`G Loss: 4.1582 | D Loss: 0.2624 | Time: 18.46s
+Epoch 00160 |`G Loss: 3.4855 | D Loss: 0.2427 | Time: 18.69s
+Epoch 00161 |`G Loss: 3.5917 | D Loss: 0.3892 | Time: 18.72s
+Epoch 00162 |`G Loss: 3.5977 | D Loss: 0.2560 | Time: 19.54s
+Epoch 00163 |`G Loss: 3.9551 | D Loss: 0.3098 | Time: 19.59s
+Epoch 00164 |`G Loss: 3.8366 | D Loss: 0.2416 | Time: 18.36s
+Epoch 00165 |`G Loss: 3.3021 | D Loss: 0.4630 | Time: 18.31s
+Epoch 00166 |`G Loss: 3.2350 | D Loss: 0.3201 | Time: 18.38s
+Epoch 00167 |`G Loss: 3.0165 | D Loss: 0.2434 | Time: 18.45s
+Epoch 00168 |`G Loss: 4.1163 | D Loss: 0.1806 | Time: 18.26s
+Epoch 00169 |`G Loss: 3.8882 | D Loss: 0.4299 | Time: 18.34s
+Epoch 00170 |`G Loss: 4.3913 | D Loss: 0.2755 | Time: 18.93s
+Epoch 00171 |`G Loss: 4.2415 | D Loss: 0.3316 | Time: 18.77s
+Epoch 00172 |`G Loss: 3.8810 | D Loss: 0.4158 | Time: 18.65s
+Epoch 00173 |`G Loss: 4.1583 | D Loss: 0.1998 | Time: 18.60s
+Epoch 00174 |`G Loss: 3.9399 | D Loss: 0.3122 | Time: 18.19s
+Epoch 00175 |`G Loss: 4.3687 | D Loss: 0.3134 | Time: 18.13s
+Epoch 00176 |`G Loss: 3.4007 | D Loss: 0.2823 | Time: 18.21s
+Epoch 00177 |`G Loss: 4.7378 | D Loss: 0.2270 | Time: 18.28s
+Epoch 00178 |`G Loss: 4.1074 | D Loss: 0.3671 | Time: 18.37s
+Epoch 00179 |`G Loss: 2.5325 | D Loss: 0.5599 | Time: 18.50s
+Epoch 00180 |`G Loss: 4.5690 | D Loss: 0.2381 | Time: 18.42s
+Epoch 00181 |`G Loss: 4.2019 | D Loss: 0.2397 | Time: 18.71s
+Epoch 00182 |`G Loss: 3.3757 | D Loss: 0.4248 | Time: 18.44s
+Epoch 00183 |`G Loss: 4.7397 | D Loss: 0.1928 | Time: 19.47s
+Epoch 00184 |`G Loss: 4.8605 | D Loss: 0.3663 | Time: 20.01s
+Epoch 00185 |`G Loss: 4.1849 | D Loss: 0.3197 | Time: 18.44s
+Epoch 00186 |`G Loss: 2.6003 | D Loss: 0.4490 | Time: 18.15s
+Epoch 00187 |`G Loss: 5.3279 | D Loss: 0.5210 | Time: 18.35s
+Epoch 00188 |`G Loss: 4.0970 | D Loss: 0.1644 | Time: 18.43s
+Epoch 00189 |`G Loss: 3.6262 | D Loss: 0.2704 | Time: 18.34s
+Epoch 00190 |`G Loss: 4.5150 | D Loss: 0.2168 | Time: 18.38s
+Epoch 00191 |`G Loss: 5.0922 | D Loss: 0.3893 | Time: 18.44s
+Epoch 00192 |`G Loss: 4.0756 | D Loss: 0.3089 | Time: 18.43s
+Epoch 00193 |`G Loss: 5.6306 | D Loss: 0.3533 | Time: 18.43s
+Epoch 00194 |`G Loss: 4.4152 | D Loss: 0.2558 | Time: 18.41s
+Epoch 00195 |`G Loss: 5.1959 | D Loss: 0.2950 | Time: 18.44s
+Epoch 00196 |`G Loss: 3.7654 | D Loss: 0.2853 | Time: 18.36s
+Epoch 00197 |`G Loss: 3.7973 | D Loss: 0.2862 | Time: 18.41s
+Epoch 00198 |`G Loss: 4.5309 | D Loss: 0.2340 | Time: 18.55s
+Epoch 00199 |`G Loss: 3.1400 | D Loss: 0.2691 | Time: 18.95s
+Epoch 00200 |`G Loss: 3.9876 | D Loss: 0.2555 | Time: 18.59s
+
+============================================================
+SAUVEGARDE - Epoch 200
+============================================================
+Images générées sauvegardées
+============================================================
+
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 200)
+Epoch 00201 |`G Loss: 4.6753 | D Loss: 0.1998 | Time: 19.86s
+Epoch 00202 |`G Loss: 3.3519 | D Loss: 0.3790 | Time: 19.09s
+Epoch 00203 |`G Loss: 3.4639 | D Loss: 0.4082 | Time: 18.42s
+Epoch 00204 |`G Loss: 4.6773 | D Loss: 0.2879 | Time: 18.27s
+Epoch 00205 |`G Loss: 3.3587 | D Loss: 0.3535 | Time: 18.35s
+Epoch 00206 |`G Loss: 3.5070 | D Loss: 0.2636 | Time: 18.38s
+Epoch 00207 |`G Loss: 4.0723 | D Loss: 0.2420 | Time: 18.30s
+Epoch 00208 |`G Loss: 2.9613 | D Loss: 0.3987 | Time: 18.33s
+Epoch 00209 |`G Loss: 4.1571 | D Loss: 0.2816 | Time: 18.75s
+Epoch 00210 |`G Loss: 3.4951 | D Loss: 0.3387 | Time: 19.33s
+Epoch 00211 |`G Loss: 4.0167 | D Loss: 0.2423 | Time: 19.82s
+Epoch 00212 |`G Loss: 3.4510 | D Loss: 0.1764 | Time: 18.85s
+Epoch 00213 |`G Loss: 4.2121 | D Loss: 0.2640 | Time: 18.16s
+Epoch 00214 |`G Loss: 4.4669 | D Loss: 0.4122 | Time: 18.33s
+Epoch 00215 |`G Loss: 3.6398 | D Loss: 0.2849 | Time: 18.41s
+Epoch 00216 |`G Loss: 3.4193 | D Loss: 0.3434 | Time: 18.48s
+Epoch 00217 |`G Loss: 4.2961 | D Loss: 0.2599 | Time: 18.44s
+Epoch 00218 |`G Loss: 3.5907 | D Loss: 0.2667 | Time: 18.46s
+Epoch 00219 |`G Loss: 4.3880 | D Loss: 0.2854 | Time: 18.41s
+Epoch 00220 |`G Loss: 4.1267 | D Loss: 0.3262 | Time: 18.36s
+Epoch 00221 |`G Loss: 4.4754 | D Loss: 0.1748 | Time: 18.37s
+Epoch 00222 |`G Loss: 3.5863 | D Loss: 0.5480 | Time: 18.33s
+Epoch 00223 |`G Loss: 4.1419 | D Loss: 0.2665 | Time: 18.45s
+Epoch 00224 |`G Loss: 4.5418 | D Loss: 0.2282 | Time: 18.37s
+Epoch 00225 |`G Loss: 4.3984 | D Loss: 0.2346 | Time: 18.41s
+Epoch 00226 |`G Loss: 4.3331 | D Loss: 0.2332 | Time: 18.41s
+Epoch 00227 |`G Loss: 3.3800 | D Loss: 0.2454 | Time: 18.39s
+Epoch 00228 |`G Loss: 3.7457 | D Loss: 0.3740 | Time: 18.53s
+Epoch 00229 |`G Loss: 3.9784 | D Loss: 0.6531 | Time: 18.33s
+Epoch 00230 |`G Loss: 3.8834 | D Loss: 0.2594 | Time: 18.44s
+Epoch 00231 |`G Loss: 5.1772 | D Loss: 0.3213 | Time: 18.41s
+Epoch 00232 |`G Loss: 4.2039 | D Loss: 0.1796 | Time: 18.45s
+Epoch 00233 |`G Loss: 3.5861 | D Loss: 0.2638 | Time: 18.30s
+Epoch 00234 |`G Loss: 2.9555 | D Loss: 0.3248 | Time: 18.28s
+Epoch 00235 |`G Loss: 5.2056 | D Loss: 0.1381 | Time: 18.42s
+Epoch 00236 |`G Loss: 4.7223 | D Loss: 0.2615 | Time: 18.47s
+Epoch 00237 |`G Loss: 5.4036 | D Loss: 0.3930 | Time: 18.43s
+Epoch 00238 |`G Loss: 4.0049 | D Loss: 0.2055 | Time: 18.42s
+Epoch 00239 |`G Loss: 5.1605 | D Loss: 0.2477 | Time: 18.32s
+Epoch 00240 |`G Loss: 4.4474 | D Loss: 0.1790 | Time: 18.48s
+Epoch 00241 |`G Loss: 3.9040 | D Loss: 0.2410 | Time: 18.43s
+Epoch 00242 |`G Loss: 5.1264 | D Loss: 0.2905 | Time: 18.36s
+Epoch 00243 |`G Loss: 4.1277 | D Loss: 0.1977 | Time: 18.41s
+Epoch 00244 |`G Loss: 4.7207 | D Loss: 0.2226 | Time: 18.49s
+Epoch 00245 |`G Loss: 4.0796 | D Loss: 0.2793 | Time: 18.48s
+Epoch 00246 |`G Loss: 4.3334 | D Loss: 0.2038 | Time: 18.48s
+Epoch 00247 |`G Loss: 4.5783 | D Loss: 0.2769 | Time: 18.56s
+Epoch 00248 |`G Loss: 5.6179 | D Loss: 0.2149 | Time: 18.48s
+Epoch 00249 |`G Loss: 3.1772 | D Loss: 0.2647 | Time: 18.48s
+Epoch 00250 |`G Loss: 4.4381 | D Loss: 0.2479 | Time: 18.38s
+Epoch 00251 |`G Loss: 2.9475 | D Loss: 0.6007 | Time: 18.43s
+Epoch 00252 |`G Loss: 4.6161 | D Loss: 0.2104 | Time: 18.45s
+Epoch 00253 |`G Loss: 3.8907 | D Loss: 0.2639 | Time: 18.37s
+Epoch 00254 |`G Loss: 4.2002 | D Loss: 0.3553 | Time: 18.41s
+Epoch 00255 |`G Loss: 3.8025 | D Loss: 0.1995 | Time: 18.46s
+Epoch 00256 |`G Loss: 4.0224 | D Loss: 0.2985 | Time: 18.44s
+Epoch 00257 |`G Loss: 3.3582 | D Loss: 0.2506 | Time: 18.35s
+Epoch 00258 |`G Loss: 4.0179 | D Loss: 0.1569 | Time: 18.39s
+Epoch 00259 |`G Loss: 5.1343 | D Loss: 0.1724 | Time: 18.48s
+Epoch 00260 |`G Loss: 4.1708 | D Loss: 0.1857 | Time: 18.42s
+Epoch 00261 |`G Loss: 4.5987 | D Loss: 0.1629 | Time: 18.47s
+Epoch 00262 |`G Loss: 3.4511 | D Loss: 0.3148 | Time: 18.39s
+Epoch 00263 |`G Loss: 4.9112 | D Loss: 0.1220 | Time: 18.38s
+Epoch 00264 |`G Loss: 4.6382 | D Loss: 0.1469 | Time: 18.33s
+Epoch 00265 |`G Loss: 4.2500 | D Loss: 0.2376 | Time: 18.35s
+Epoch 00266 |`G Loss: 2.9584 | D Loss: 0.8680 | Time: 18.42s
+Epoch 00267 |`G Loss: 3.5004 | D Loss: 0.3116 | Time: 18.29s
+Epoch 00268 |`G Loss: 3.9955 | D Loss: 0.2324 | Time: 18.28s
+Epoch 00269 |`G Loss: 3.6597 | D Loss: 0.2940 | Time: 18.39s
+Epoch 00270 |`G Loss: 4.0773 | D Loss: 0.2197 | Time: 18.94s
+Epoch 00271 |`G Loss: 3.9865 | D Loss: 0.5159 | Time: 19.20s
+Epoch 00272 |`G Loss: 4.2184 | D Loss: 0.2129 | Time: 19.93s
+Epoch 00273 |`G Loss: 3.6321 | D Loss: 0.3051 | Time: 19.02s
+Epoch 00274 |`G Loss: 3.7700 | D Loss: 0.3681 | Time: 18.38s
+Epoch 00275 |`G Loss: 4.3435 | D Loss: 0.2379 | Time: 18.41s
+Epoch 00276 |`G Loss: 5.0710 | D Loss: 0.2551 | Time: 18.38s
+Epoch 00277 |`G Loss: 3.4410 | D Loss: 0.3160 | Time: 18.40s
+Epoch 00278 |`G Loss: 3.7038 | D Loss: 0.3249 | Time: 18.31s
+Epoch 00279 |`G Loss: 3.5879 | D Loss: 0.2212 | Time: 18.34s
+Epoch 00280 |`G Loss: 4.0451 | D Loss: 0.2196 | Time: 18.44s
+Epoch 00281 |`G Loss: 6.1465 | D Loss: 0.2763 | Time: 18.35s
+Epoch 00282 |`G Loss: 6.1174 | D Loss: 0.3616 | Time: 18.34s
+Epoch 00283 |`G Loss: 4.8333 | D Loss: 0.1484 | Time: 18.34s
+Epoch 00284 |`G Loss: 3.9335 | D Loss: 0.1761 | Time: 18.46s
+Epoch 00285 |`G Loss: 4.6569 | D Loss: 0.1312 | Time: 18.39s
+Epoch 00286 |`G Loss: 3.9865 | D Loss: 0.1740 | Time: 18.39s
+Epoch 00287 |`G Loss: 3.9256 | D Loss: 0.2371 | Time: 18.74s
+Epoch 00288 |`G Loss: 4.1663 | D Loss: 0.2323 | Time: 18.61s
+Epoch 00289 |`G Loss: 5.8430 | D Loss: 0.2840 | Time: 19.13s
+Epoch 00290 |`G Loss: 3.5749 | D Loss: 0.2280 | Time: 19.20s
+Epoch 00291 |`G Loss: 4.6155 | D Loss: 0.2128 | Time: 18.19s
+Epoch 00292 |`G Loss: 4.6222 | D Loss: 0.2458 | Time: 18.31s
+Epoch 00293 |`G Loss: 4.7807 | D Loss: 0.2545 | Time: 18.33s
+Epoch 00294 |`G Loss: 4.5523 | D Loss: 0.4332 | Time: 18.34s
+Epoch 00295 |`G Loss: 5.4057 | D Loss: 0.1624 | Time: 18.28s
+Epoch 00296 |`G Loss: 4.9355 | D Loss: 0.2499 | Time: 18.32s
+Epoch 00297 |`G Loss: 4.5513 | D Loss: 0.2239 | Time: 18.23s
+Epoch 00298 |`G Loss: 3.7155 | D Loss: 0.2581 | Time: 18.27s
+Epoch 00299 |`G Loss: 5.3880 | D Loss: 0.1696 | Time: 18.37s
+Epoch 00300 |`G Loss: 4.0598 | D Loss: 0.1459 | Time: 18.29s
+
+============================================================
+SAUVEGARDE - Epoch 300
+============================================================
+Images générées sauvegardées
+============================================================
+
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 300)
+Epoch 00301 |`G Loss: 3.6580 | D Loss: 0.2153 | Time: 18.35s
+Epoch 00302 |`G Loss: 5.6066 | D Loss: 0.2734 | Time: 18.34s
+Epoch 00303 |`G Loss: 4.7092 | D Loss: 0.3009 | Time: 18.33s
+Epoch 00304 |`G Loss: 5.6755 | D Loss: 0.4013 | Time: 18.24s
+Epoch 00305 |`G Loss: 4.5886 | D Loss: 0.2620 | Time: 18.30s
+Epoch 00306 |`G Loss: 4.2783 | D Loss: 0.2051 | Time: 18.34s
+Epoch 00307 |`G Loss: 4.7832 | D Loss: 0.2078 | Time: 18.33s
+Epoch 00308 |`G Loss: 5.8332 | D Loss: 0.1732 | Time: 18.86s
+Epoch 00309 |`G Loss: 4.7178 | D Loss: 0.2165 | Time: 18.48s
+Epoch 00310 |`G Loss: 4.0692 | D Loss: 0.3011 | Time: 19.79s
+Epoch 00311 |`G Loss: 4.9545 | D Loss: 0.2566 | Time: 19.71s
+Epoch 00312 |`G Loss: 4.2601 | D Loss: 0.1407 | Time: 18.23s
+Epoch 00313 |`G Loss: 3.7783 | D Loss: 0.1998 | Time: 18.30s
+Epoch 00314 |`G Loss: 4.2338 | D Loss: 0.2940 | Time: 18.38s
+Epoch 00315 |`G Loss: 4.4948 | D Loss: 0.2265 | Time: 18.38s
+Epoch 00316 |`G Loss: 3.5327 | D Loss: 0.3224 | Time: 18.35s
+Epoch 00317 |`G Loss: 5.0649 | D Loss: 0.1818 | Time: 18.33s
+Epoch 00318 |`G Loss: 4.9571 | D Loss: 0.2621 | Time: 18.39s
+Epoch 00319 |`G Loss: 4.5866 | D Loss: 0.2079 | Time: 18.36s
+Epoch 00320 |`G Loss: 5.6739 | D Loss: 0.1656 | Time: 18.34s
+Epoch 00321 |`G Loss: 4.0402 | D Loss: 0.2084 | Time: 18.38s
+Epoch 00322 |`G Loss: 4.6951 | D Loss: 0.2072 | Time: 18.44s
+Epoch 00323 |`G Loss: 4.5991 | D Loss: 0.1474 | Time: 18.32s
+Epoch 00324 |`G Loss: 4.8920 | D Loss: 0.2090 | Time: 18.38s
+Epoch 00325 |`G Loss: 5.8801 | D Loss: 0.2272 | Time: 18.36s
+Epoch 00326 |`G Loss: 3.5818 | D Loss: 0.1818 | Time: 18.34s
+Epoch 00327 |`G Loss: 4.9708 | D Loss: 0.1437 | Time: 18.54s
+Epoch 00328 |`G Loss: 3.2227 | D Loss: 0.7468 | Time: 18.73s
+Epoch 00329 |`G Loss: 5.4552 | D Loss: 0.2602 | Time: 19.66s
+Epoch 00330 |`G Loss: 5.0091 | D Loss: 0.3245 | Time: 19.92s
+Epoch 00331 |`G Loss: 5.8716 | D Loss: 0.3290 | Time: 19.32s
+Epoch 00332 |`G Loss: 4.4677 | D Loss: 0.2850 | Time: 18.21s
+Epoch 00333 |`G Loss: 3.9727 | D Loss: 0.2758 | Time: 18.32s
+Epoch 00334 |`G Loss: 5.2366 | D Loss: 0.1396 | Time: 18.34s
+Epoch 00335 |`G Loss: 6.6463 | D Loss: 0.1447 | Time: 18.44s
+Epoch 00336 |`G Loss: 5.3136 | D Loss: 0.1232 | Time: 18.40s
+Epoch 00337 |`G Loss: 3.4231 | D Loss: 0.1838 | Time: 18.32s
+Epoch 00338 |`G Loss: 3.9437 | D Loss: 0.2312 | Time: 18.36s
+Epoch 00339 |`G Loss: 5.0445 | D Loss: 0.0880 | Time: 18.29s
+Epoch 00340 |`G Loss: 5.3052 | D Loss: 0.1206 | Time: 18.30s
+Epoch 00341 |`G Loss: 4.1107 | D Loss: 0.3124 | Time: 18.36s
+Epoch 00342 |`G Loss: 3.0767 | D Loss: 0.5011 | Time: 18.40s
+Epoch 00343 |`G Loss: 3.5316 | D Loss: 0.4805 | Time: 18.34s
+Epoch 00344 |`G Loss: 4.3902 | D Loss: 0.2023 | Time: 18.34s
+Epoch 00345 |`G Loss: 4.0352 | D Loss: 0.1874 | Time: 18.31s
+Epoch 00346 |`G Loss: 4.0810 | D Loss: 0.2264 | Time: 18.31s
+Epoch 00347 |`G Loss: 6.2074 | D Loss: 0.2269 | Time: 18.27s
+Epoch 00348 |`G Loss: 4.0962 | D Loss: 0.2426 | Time: 18.26s
+Epoch 00349 |`G Loss: 4.2475 | D Loss: 0.2071 | Time: 18.44s
+Epoch 00350 |`G Loss: 3.7532 | D Loss: 0.1344 | Time: 18.32s
+Epoch 00351 |`G Loss: 3.7787 | D Loss: 0.2217 | Time: 18.42s
+Epoch 00352 |`G Loss: 5.4998 | D Loss: 0.1547 | Time: 18.27s
+Epoch 00353 |`G Loss: 4.5864 | D Loss: 0.2193 | Time: 18.41s
+Epoch 00354 |`G Loss: 5.5103 | D Loss: 0.2079 | Time: 18.30s
+Epoch 00355 |`G Loss: 4.1694 | D Loss: 0.3083 | Time: 18.35s
+Epoch 00356 |`G Loss: 4.7610 | D Loss: 0.2608 | Time: 18.35s
+Epoch 00357 |`G Loss: 4.3821 | D Loss: 0.2933 | Time: 18.37s
+Epoch 00358 |`G Loss: 5.4384 | D Loss: 0.1899 | Time: 18.40s
+Epoch 00359 |`G Loss: 4.5220 | D Loss: 0.3476 | Time: 18.40s
+Epoch 00360 |`G Loss: 2.0340 | D Loss: 0.6441 | Time: 18.37s
+Epoch 00361 |`G Loss: 4.8564 | D Loss: 0.2056 | Time: 18.38s
+Epoch 00362 |`G Loss: 5.4635 | D Loss: 0.1693 | Time: 18.35s
+Epoch 00363 |`G Loss: 3.7845 | D Loss: 0.3056 | Time: 18.40s
+Epoch 00364 |`G Loss: 4.2463 | D Loss: 0.2632 | Time: 18.45s
+Epoch 00365 |`G Loss: 3.9484 | D Loss: 0.1851 | Time: 18.36s
+Epoch 00366 |`G Loss: 3.8014 | D Loss: 0.2459 | Time: 18.36s
+Epoch 00367 |`G Loss: 3.5806 | D Loss: 0.3542 | Time: 18.36s
+Epoch 00368 |`G Loss: 5.1479 | D Loss: 0.1537 | Time: 18.43s
+Epoch 00369 |`G Loss: 4.5478 | D Loss: 0.2468 | Time: 18.35s
+Epoch 00370 |`G Loss: 5.2483 | D Loss: 0.2500 | Time: 18.42s
+Epoch 00371 |`G Loss: 3.9483 | D Loss: 0.2255 | Time: 18.36s
+Epoch 00372 |`G Loss: 2.6545 | D Loss: 0.3354 | Time: 18.39s
+Epoch 00373 |`G Loss: 6.1687 | D Loss: 0.4258 | Time: 18.34s
+Epoch 00374 |`G Loss: 6.7143 | D Loss: 0.2546 | Time: 18.40s
+Epoch 00375 |`G Loss: 4.6327 | D Loss: 0.2177 | Time: 18.38s
+Epoch 00376 |`G Loss: 4.2764 | D Loss: 0.1704 | Time: 18.43s
+Epoch 00377 |`G Loss: 5.0477 | D Loss: 1.0221 | Time: 18.40s
+Epoch 00378 |`G Loss: 4.8287 | D Loss: 0.2253 | Time: 18.31s
+Epoch 00379 |`G Loss: 4.5115 | D Loss: 0.2113 | Time: 18.44s
+Epoch 00380 |`G Loss: 4.5219 | D Loss: 0.1736 | Time: 18.31s
+Epoch 00381 |`G Loss: 3.8842 | D Loss: 0.2515 | Time: 18.35s
+Epoch 00382 |`G Loss: 5.0418 | D Loss: 0.1435 | Time: 18.34s
+Epoch 00383 |`G Loss: 6.0060 | D Loss: 0.1365 | Time: 18.36s
+Epoch 00384 |`G Loss: 4.2349 | D Loss: 0.3128 | Time: 18.35s
+Epoch 00385 |`G Loss: 4.2968 | D Loss: 0.1771 | Time: 18.38s
+Epoch 00386 |`G Loss: 5.4000 | D Loss: 0.1983 | Time: 18.36s
+Epoch 00387 |`G Loss: 4.8088 | D Loss: 0.2859 | Time: 18.37s
+Epoch 00388 |`G Loss: 4.4866 | D Loss: 0.2463 | Time: 18.37s
+Epoch 00389 |`G Loss: 3.4816 | D Loss: 0.2287 | Time: 18.30s
+Epoch 00390 |`G Loss: 6.2544 | D Loss: 0.2877 | Time: 18.39s
+Epoch 00391 |`G Loss: 5.1625 | D Loss: 0.2048 | Time: 18.30s
+Epoch 00392 |`G Loss: 3.4761 | D Loss: 0.2205 | Time: 18.38s
+Epoch 00393 |`G Loss: 2.4993 | D Loss: 0.2752 | Time: 18.25s
+Epoch 00394 |`G Loss: 3.1298 | D Loss: 0.2827 | Time: 18.38s
+Epoch 00395 |`G Loss: 6.1031 | D Loss: 0.2196 | Time: 18.43s
+Epoch 00396 |`G Loss: 5.2731 | D Loss: 0.2360 | Time: 18.37s
+Epoch 00397 |`G Loss: 4.4210 | D Loss: 0.1961 | Time: 18.44s
+Epoch 00398 |`G Loss: 3.9176 | D Loss: 0.3288 | Time: 18.38s
+Epoch 00399 |`G Loss: 4.3555 | D Loss: 0.2453 | Time: 18.40s
+Epoch 00400 |`G Loss: 6.6391 | D Loss: 0.4761 | Time: 18.45s
+
+============================================================
+SAUVEGARDE - Epoch 400
+============================================================
+Images générées sauvegardées
+============================================================
+
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 400)
+Epoch 00401 |`G Loss: 4.6838 | D Loss: 0.4900 | Time: 18.34s
+Epoch 00402 |`G Loss: 7.3724 | D Loss: 0.3784 | Time: 18.50s
+Epoch 00403 |`G Loss: 4.1570 | D Loss: 0.1639 | Time: 18.40s
+Epoch 00404 |`G Loss: 5.8032 | D Loss: 0.1835 | Time: 18.57s
+Epoch 00405 |`G Loss: 4.4427 | D Loss: 0.1844 | Time: 18.47s
+Epoch 00406 |`G Loss: 5.4984 | D Loss: 0.2376 | Time: 18.50s
+Epoch 00407 |`G Loss: 5.4921 | D Loss: 0.2438 | Time: 18.32s
+Epoch 00408 |`G Loss: 5.2354 | D Loss: 0.2480 | Time: 18.42s
+Epoch 00409 |`G Loss: 4.8328 | D Loss: 0.2158 | Time: 18.34s
+Epoch 00410 |`G Loss: 4.5510 | D Loss: 0.1921 | Time: 18.41s
+Epoch 00411 |`G Loss: 6.3935 | D Loss: 0.1326 | Time: 18.39s
+Epoch 00412 |`G Loss: 4.3428 | D Loss: 0.1707 | Time: 18.36s
+Epoch 00413 |`G Loss: 6.3940 | D Loss: 0.1218 | Time: 18.41s
+Epoch 00414 |`G Loss: 5.0296 | D Loss: 0.2454 | Time: 18.37s
+Epoch 00415 |`G Loss: 5.7091 | D Loss: 2.8237 | Time: 18.32s
+Epoch 00416 |`G Loss: 6.2285 | D Loss: 0.1340 | Time: 18.41s
+Epoch 00417 |`G Loss: 4.8698 | D Loss: 0.2031 | Time: 18.42s
+Epoch 00418 |`G Loss: 5.2038 | D Loss: 0.1695 | Time: 18.33s
+Epoch 00419 |`G Loss: 5.3380 | D Loss: 0.2851 | Time: 18.38s
+Epoch 00420 |`G Loss: 3.5077 | D Loss: 0.3203 | Time: 18.43s
+Epoch 00421 |`G Loss: 5.0133 | D Loss: 0.1853 | Time: 18.34s
+Epoch 00422 |`G Loss: 4.2405 | D Loss: 0.2342 | Time: 18.45s
+Epoch 00423 |`G Loss: 5.4324 | D Loss: 0.1509 | Time: 18.41s
+Epoch 00424 |`G Loss: 3.4836 | D Loss: 0.3457 | Time: 18.33s
+Epoch 00425 |`G Loss: 4.0381 | D Loss: 0.1926 | Time: 18.40s
+Epoch 00426 |`G Loss: 5.8778 | D Loss: 0.2517 | Time: 18.40s
+Epoch 00427 |`G Loss: 4.9230 | D Loss: 0.1943 | Time: 18.39s
+Epoch 00428 |`G Loss: 3.6212 | D Loss: 0.2624 | Time: 18.36s
+Epoch 00429 |`G Loss: 4.1136 | D Loss: 0.2546 | Time: 18.35s
+Epoch 00430 |`G Loss: 5.8563 | D Loss: 0.4443 | Time: 18.37s
+Epoch 00431 |`G Loss: 4.9640 | D Loss: 0.2192 | Time: 18.37s
+Epoch 00432 |`G Loss: 5.6428 | D Loss: 0.1525 | Time: 18.28s
+Epoch 00433 |`G Loss: 2.9574 | D Loss: 0.4201 | Time: 18.42s
+Epoch 00434 |`G Loss: 4.3834 | D Loss: 0.2129 | Time: 18.48s
+Epoch 00435 |`G Loss: 4.8853 | D Loss: 0.2120 | Time: 18.40s
+Epoch 00436 |`G Loss: 3.9387 | D Loss: 0.3168 | Time: 18.54s
+Epoch 00437 |`G Loss: 4.1403 | D Loss: 0.2121 | Time: 18.39s
+Epoch 00438 |`G Loss: 5.9230 | D Loss: 0.2281 | Time: 18.51s
+Epoch 00439 |`G Loss: 5.3089 | D Loss: 0.1181 | Time: 18.41s
+Epoch 00440 |`G Loss: 4.8038 | D Loss: 2.1770 | Time: 18.40s
+Epoch 00441 |`G Loss: 1.4694 | D Loss: 4.5679 | Time: 18.36s
+Epoch 00442 |`G Loss: 4.8929 | D Loss: 0.1892 | Time: 18.41s
+Epoch 00443 |`G Loss: 4.5371 | D Loss: 0.2073 | Time: 18.43s
+Epoch 00444 |`G Loss: 4.7964 | D Loss: 0.1970 | Time: 18.37s
+Epoch 00445 |`G Loss: 4.2746 | D Loss: 0.2502 | Time: 18.30s
+Epoch 00446 |`G Loss: 7.1949 | D Loss: 0.3055 | Time: 18.72s
+Epoch 00447 |`G Loss: 5.3226 | D Loss: 0.1737 | Time: 18.79s
+Epoch 00448 |`G Loss: 5.4966 | D Loss: 0.2163 | Time: 20.18s
+Epoch 00449 |`G Loss: 6.1001 | D Loss: 0.1761 | Time: 19.04s
+Epoch 00450 |`G Loss: 4.8808 | D Loss: 0.4551 | Time: 18.18s
+Epoch 00451 |`G Loss: 4.9787 | D Loss: 0.2484 | Time: 18.54s
+Epoch 00452 |`G Loss: 4.2698 | D Loss: 0.2431 | Time: 18.41s
+Epoch 00453 |`G Loss: 4.9117 | D Loss: 0.3589 | Time: 18.46s
+Epoch 00454 |`G Loss: 4.5391 | D Loss: 0.2962 | Time: 19.02s
+Epoch 00455 |`G Loss: 4.7527 | D Loss: 0.1463 | Time: 18.91s
+Epoch 00456 |`G Loss: 4.4888 | D Loss: 0.2738 | Time: 19.83s
+Epoch 00457 |`G Loss: 4.9568 | D Loss: 0.2579 | Time: 19.21s
+Epoch 00458 |`G Loss: 3.6663 | D Loss: 0.3201 | Time: 18.19s
+Epoch 00459 |`G Loss: 4.6379 | D Loss: 0.1374 | Time: 18.35s
+Epoch 00460 |`G Loss: 5.2279 | D Loss: 0.1365 | Time: 18.50s
+Epoch 00461 |`G Loss: 5.7657 | D Loss: 0.1925 | Time: 18.33s
+Epoch 00462 |`G Loss: 3.7488 | D Loss: 0.2345 | Time: 18.49s
+Epoch 00463 |`G Loss: 4.3981 | D Loss: 0.2854 | Time: 18.40s
+Epoch 00464 |`G Loss: 4.3300 | D Loss: 0.2631 | Time: 18.59s
+Epoch 00465 |`G Loss: 4.6098 | D Loss: 0.2510 | Time: 18.34s
+Epoch 00466 |`G Loss: 4.2227 | D Loss: 0.3644 | Time: 18.41s
+Epoch 00467 |`G Loss: 5.2889 | D Loss: 0.1812 | Time: 18.47s
+Epoch 00468 |`G Loss: 5.1243 | D Loss: 0.2492 | Time: 18.34s
+Epoch 00469 |`G Loss: 4.7145 | D Loss: 0.1968 | Time: 18.36s
+Epoch 00470 |`G Loss: 4.9623 | D Loss: 0.2081 | Time: 18.43s
+Epoch 00471 |`G Loss: 4.3076 | D Loss: 0.2131 | Time: 18.31s
+Epoch 00472 |`G Loss: 6.0864 | D Loss: 0.2345 | Time: 18.42s
+Epoch 00473 |`G Loss: 4.2688 | D Loss: 0.1969 | Time: 18.32s
+Epoch 00474 |`G Loss: 3.9866 | D Loss: 0.3886 | Time: 18.35s
+Epoch 00475 |`G Loss: 5.3191 | D Loss: 0.2135 | Time: 18.30s
+Epoch 00476 |`G Loss: 3.9863 | D Loss: 0.4312 | Time: 18.44s
+Epoch 00477 |`G Loss: 4.3496 | D Loss: 0.3260 | Time: 18.32s
+Epoch 00478 |`G Loss: 4.0328 | D Loss: 0.2285 | Time: 18.44s
+Epoch 00479 |`G Loss: 5.3254 | D Loss: 0.1548 | Time: 18.62s
+Epoch 00480 |`G Loss: 4.5975 | D Loss: 0.1214 | Time: 19.27s
+Epoch 00481 |`G Loss: 5.2799 | D Loss: 0.2779 | Time: 19.68s
+Epoch 00482 |`G Loss: 5.6054 | D Loss: 0.2979 | Time: 18.67s
+Epoch 00483 |`G Loss: 4.8858 | D Loss: 0.2610 | Time: 18.26s
+Epoch 00484 |`G Loss: 5.8732 | D Loss: 0.2373 | Time: 18.35s
+Epoch 00485 |`G Loss: 4.1855 | D Loss: 0.2002 | Time: 18.41s
+Epoch 00486 |`G Loss: 3.8739 | D Loss: 0.2753 | Time: 18.34s
+Epoch 00487 |`G Loss: 5.2176 | D Loss: 0.1677 | Time: 18.42s
+Epoch 00488 |`G Loss: 5.2704 | D Loss: 0.1800 | Time: 18.32s
+Epoch 00489 |`G Loss: 4.1584 | D Loss: 0.1764 | Time: 18.45s
+Epoch 00490 |`G Loss: 5.4357 | D Loss: 0.2975 | Time: 18.41s
+Epoch 00491 |`G Loss: 4.4510 | D Loss: 0.1420 | Time: 18.32s
+Epoch 00492 |`G Loss: 4.7637 | D Loss: 0.1901 | Time: 18.41s
+Epoch 00493 |`G Loss: 4.2808 | D Loss: 0.1536 | Time: 18.94s
+Epoch 00494 |`G Loss: 3.8105 | D Loss: 0.3833 | Time: 20.17s
+Epoch 00495 |`G Loss: 5.8447 | D Loss: 0.1729 | Time: 20.29s
+Epoch 00496 |`G Loss: 4.8621 | D Loss: 0.2081 | Time: 18.49s
+Epoch 00497 |`G Loss: 4.5769 | D Loss: 0.2305 | Time: 18.25s
+Epoch 00498 |`G Loss: 3.7934 | D Loss: 0.2603 | Time: 18.43s
+Epoch 00499 |`G Loss: 5.2095 | D Loss: 0.2011 | Time: 18.35s
+Epoch 00500 |`G Loss: 4.9712 | D Loss: 0.3209 | Time: 18.36s
+
+============================================================
+SAUVEGARDE - Epoch 500
+============================================================
+Images générées sauvegardées
+============================================================
+
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 500)
+Epoch 00501 |`G Loss: 4.7128 | D Loss: 0.1532 | Time: 18.47s
+Epoch 00502 |`G Loss: 4.6920 | D Loss: 0.2242 | Time: 18.36s
+Epoch 00503 |`G Loss: 6.1823 | D Loss: 0.2774 | Time: 18.17s
+Epoch 00504 |`G Loss: 4.3939 | D Loss: 0.3537 | Time: 18.36s
+Epoch 00505 |`G Loss: 4.7894 | D Loss: 0.2516 | Time: 18.37s
+Epoch 00506 |`G Loss: 3.7242 | D Loss: 0.1958 | Time: 18.19s
+Epoch 00507 |`G Loss: 3.8933 | D Loss: 0.1490 | Time: 18.32s
+Epoch 00508 |`G Loss: 4.5515 | D Loss: 0.1286 | Time: 18.31s
+Epoch 00509 |`G Loss: 6.0282 | D Loss: 0.1855 | Time: 18.19s
+Epoch 00510 |`G Loss: 4.4813 | D Loss: 0.1895 | Time: 18.47s
+Epoch 00511 |`G Loss: 3.9495 | D Loss: 0.2693 | Time: 18.52s
+Epoch 00512 |`G Loss: 3.8711 | D Loss: 0.1683 | Time: 18.43s
+Epoch 00513 |`G Loss: 5.1127 | D Loss: 0.2746 | Time: 18.47s
+Epoch 00514 |`G Loss: 4.2226 | D Loss: 0.2748 | Time: 18.36s
+Epoch 00515 |`G Loss: 5.2412 | D Loss: 0.2162 | Time: 18.52s
+Epoch 00516 |`G Loss: 4.6403 | D Loss: 0.1386 | Time: 18.33s
+Epoch 00517 |`G Loss: 3.8066 | D Loss: 0.1955 | Time: 18.49s
+Epoch 00518 |`G Loss: 4.6856 | D Loss: 0.2819 | Time: 18.38s
+Epoch 00519 |`G Loss: 4.8772 | D Loss: 0.1856 | Time: 19.18s
+Epoch 00520 |`G Loss: 5.2974 | D Loss: 0.2822 | Time: 19.28s
+Epoch 00521 |`G Loss: 6.2179 | D Loss: 0.1799 | Time: 20.10s
+Epoch 00522 |`G Loss: 4.4047 | D Loss: 0.3475 | Time: 19.94s
+Epoch 00523 |`G Loss: 4.7158 | D Loss: 0.1862 | Time: 19.36s
+Epoch 00524 |`G Loss: 5.2294 | D Loss: 0.1866 | Time: 18.37s
+Epoch 00525 |`G Loss: 6.0752 | D Loss: 0.1347 | Time: 18.24s
+Epoch 00526 |`G Loss: 3.4872 | D Loss: 0.2055 | Time: 18.40s
+Epoch 00527 |`G Loss: 4.5363 | D Loss: 0.1310 | Time: 18.43s
+Epoch 00528 |`G Loss: 5.6112 | D Loss: 0.1585 | Time: 18.28s
+Epoch 00529 |`G Loss: 4.1522 | D Loss: 0.3115 | Time: 18.42s
+Epoch 00530 |`G Loss: 4.9004 | D Loss: 0.1338 | Time: 18.54s
+Epoch 00531 |`G Loss: 3.9724 | D Loss: 0.2565 | Time: 18.43s
+Epoch 00532 |`G Loss: 3.6893 | D Loss: 0.3213 | Time: 18.43s
+Epoch 00533 |`G Loss: 4.6633 | D Loss: 0.1640 | Time: 18.54s
+Epoch 00534 |`G Loss: 5.2376 | D Loss: 0.2200 | Time: 18.41s
+Epoch 00535 |`G Loss: 5.5651 | D Loss: 0.1460 | Time: 18.47s
+Epoch 00536 |`G Loss: 5.0093 | D Loss: 0.1066 | Time: 18.41s
+Epoch 00537 |`G Loss: 4.1553 | D Loss: 0.3804 | Time: 18.44s
+Epoch 00538 |`G Loss: 3.7474 | D Loss: 0.5398 | Time: 18.45s
+Epoch 00539 |`G Loss: 5.0579 | D Loss: 0.2549 | Time: 18.30s
+Epoch 00540 |`G Loss: 5.1984 | D Loss: 0.3233 | Time: 18.40s
+Epoch 00541 |`G Loss: 4.2087 | D Loss: 0.3135 | Time: 18.39s
+Epoch 00542 |`G Loss: 4.9891 | D Loss: 0.2563 | Time: 18.40s
+Epoch 00543 |`G Loss: 6.0114 | D Loss: 0.1775 | Time: 18.46s
+Epoch 00544 |`G Loss: 4.9699 | D Loss: 0.2773 | Time: 18.47s
+Epoch 00545 |`G Loss: 5.3776 | D Loss: 0.1410 | Time: 18.47s
+Epoch 00546 |`G Loss: 6.6670 | D Loss: 0.4247 | Time: 18.61s
+Epoch 00547 |`G Loss: 3.7050 | D Loss: 1.2187 | Time: 18.39s
+Epoch 00548 |`G Loss: 5.5578 | D Loss: 0.3663 | Time: 18.46s
+Epoch 00549 |`G Loss: 4.9220 | D Loss: 0.1589 | Time: 18.31s
+Epoch 00550 |`G Loss: 4.6515 | D Loss: 0.1858 | Time: 18.39s
+Epoch 00551 |`G Loss: 6.7600 | D Loss: 0.2000 | Time: 18.34s
+Epoch 00552 |`G Loss: 4.6336 | D Loss: 0.1352 | Time: 18.83s
+Epoch 00553 |`G Loss: 4.5051 | D Loss: 0.2326 | Time: 19.05s
+Epoch 00554 |`G Loss: 3.6105 | D Loss: 0.3074 | Time: 19.77s
+Epoch 00555 |`G Loss: 4.0301 | D Loss: 0.3077 | Time: 19.31s
+Epoch 00556 |`G Loss: 4.4471 | D Loss: 0.1997 | Time: 18.21s
+Epoch 00557 |`G Loss: 4.3608 | D Loss: 0.2246 | Time: 18.41s
+Epoch 00558 |`G Loss: 4.7776 | D Loss: 0.2148 | Time: 18.34s
+Epoch 00559 |`G Loss: 6.8972 | D Loss: 0.2429 | Time: 18.47s
+Epoch 00560 |`G Loss: 5.3033 | D Loss: 0.3098 | Time: 18.38s
+Epoch 00561 |`G Loss: 6.8283 | D Loss: 0.2910 | Time: 18.40s
+Epoch 00562 |`G Loss: 4.4837 | D Loss: 0.1127 | Time: 18.35s
+Epoch 00563 |`G Loss: 4.8341 | D Loss: 0.1717 | Time: 18.31s
+Epoch 00564 |`G Loss: 5.2528 | D Loss: 0.2458 | Time: 18.45s
+Epoch 00565 |`G Loss: 4.2243 | D Loss: 0.1685 | Time: 18.34s
+Epoch 00566 |`G Loss: 5.1769 | D Loss: 0.1399 | Time: 18.44s
+Epoch 00567 |`G Loss: 6.0317 | D Loss: 0.2711 | Time: 18.37s
+Epoch 00568 |`G Loss: 5.1641 | D Loss: 0.2917 | Time: 18.40s
+Epoch 00569 |`G Loss: 5.7628 | D Loss: 0.1342 | Time: 18.80s
+Epoch 00570 |`G Loss: 6.3180 | D Loss: 0.3575 | Time: 19.23s
+Epoch 00571 |`G Loss: 3.9676 | D Loss: 0.8471 | Time: 18.99s
+Epoch 00572 |`G Loss: 5.1609 | D Loss: 0.3191 | Time: 19.22s
+Epoch 00573 |`G Loss: 0.0925 | D Loss: 16.8141 | Time: 18.27s
+Epoch 00574 |`G Loss: 5.3494 | D Loss: 0.1925 | Time: 18.26s
+Epoch 00575 |`G Loss: 4.8478 | D Loss: 0.1300 | Time: 18.33s
+Epoch 00576 |`G Loss: 5.4052 | D Loss: 0.2208 | Time: 18.33s
+Epoch 00577 |`G Loss: 4.3782 | D Loss: 0.3545 | Time: 18.35s
+Epoch 00578 |`G Loss: 5.2354 | D Loss: 0.2225 | Time: 18.37s
+Epoch 00579 |`G Loss: 4.3011 | D Loss: 0.2302 | Time: 18.41s
+Epoch 00580 |`G Loss: 3.8888 | D Loss: 0.2511 | Time: 18.33s
+Epoch 00581 |`G Loss: 5.2055 | D Loss: 0.1501 | Time: 18.38s
+Epoch 00582 |`G Loss: 4.3193 | D Loss: 0.1292 | Time: 18.43s
+Epoch 00583 |`G Loss: 3.6147 | D Loss: 0.3403 | Time: 18.34s
+Epoch 00584 |`G Loss: 5.2037 | D Loss: 0.1650 | Time: 18.28s
+Epoch 00585 |`G Loss: 4.7235 | D Loss: 0.2817 | Time: 18.27s
+Epoch 00586 |`G Loss: 4.6742 | D Loss: 0.2252 | Time: 18.37s
+Epoch 00587 |`G Loss: 5.4434 | D Loss: 0.2501 | Time: 18.33s
+Epoch 00588 |`G Loss: 4.9080 | D Loss: 0.1947 | Time: 18.31s
+Epoch 00589 |`G Loss: 5.7727 | D Loss: 0.1751 | Time: 18.35s
+Epoch 00590 |`G Loss: 6.7872 | D Loss: 0.4158 | Time: 18.35s
+Epoch 00591 |`G Loss: 4.9343 | D Loss: 0.1881 | Time: 18.40s
+Epoch 00592 |`G Loss: 5.7472 | D Loss: 0.2224 | Time: 18.34s
+Epoch 00593 |`G Loss: 6.9938 | D Loss: 0.2118 | Time: 18.44s
+Epoch 00594 |`G Loss: 5.8223 | D Loss: 0.1451 | Time: 18.36s
+Epoch 00595 |`G Loss: 4.4398 | D Loss: 0.2515 | Time: 18.45s
+Epoch 00596 |`G Loss: 4.5345 | D Loss: 0.2455 | Time: 18.36s
+Epoch 00597 |`G Loss: 4.0892 | D Loss: 0.2115 | Time: 18.39s
+Epoch 00598 |`G Loss: 5.5983 | D Loss: 0.0946 | Time: 18.39s
+Epoch 00599 |`G Loss: 5.5326 | D Loss: 0.4998 | Time: 18.33s
+Epoch 00600 |`G Loss: 5.5587 | D Loss: 0.1673 | Time: 18.34s
+
+============================================================
+SAUVEGARDE - Epoch 600
+============================================================
+Images générées sauvegardées
+============================================================
+
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 600)
+Epoch 00601 |`G Loss: 5.2410 | D Loss: 0.2207 | Time: 18.36s
+Epoch 00602 |`G Loss: 5.4542 | D Loss: 0.1296 | Time: 18.40s
+Epoch 00603 |`G Loss: 5.2163 | D Loss: 0.1200 | Time: 18.37s
+Epoch 00604 |`G Loss: 6.2628 | D Loss: 0.2560 | Time: 18.49s
+Epoch 00605 |`G Loss: 4.7867 | D Loss: 0.1912 | Time: 18.29s
+Epoch 00606 |`G Loss: 4.3753 | D Loss: 0.4067 | Time: 18.36s
+Epoch 00607 |`G Loss: 3.5442 | D Loss: 0.1796 | Time: 18.33s
+Epoch 00608 |`G Loss: 4.6052 | D Loss: 0.1841 | Time: 18.50s
+Epoch 00609 |`G Loss: 5.1337 | D Loss: 0.3025 | Time: 18.32s
+Epoch 00610 |`G Loss: 5.0311 | D Loss: 0.2217 | Time: 18.31s
+Epoch 00611 |`G Loss: 4.4932 | D Loss: 0.4540 | Time: 18.37s
+Epoch 00612 |`G Loss: 3.9936 | D Loss: 0.2489 | Time: 18.38s
+Epoch 00613 |`G Loss: 4.6737 | D Loss: 0.2397 | Time: 18.29s
+Epoch 00614 |`G Loss: 4.9269 | D Loss: 0.1854 | Time: 18.33s
+Epoch 00615 |`G Loss: 4.2481 | D Loss: 0.3234 | Time: 18.19s
+Epoch 00616 |`G Loss: 4.7868 | D Loss: 0.1393 | Time: 18.29s
+Epoch 00617 |`G Loss: 4.5738 | D Loss: 0.1546 | Time: 18.39s
+Epoch 00618 |`G Loss: 5.0598 | D Loss: 0.2950 | Time: 18.30s
+Epoch 00619 |`G Loss: 4.9604 | D Loss: 0.3476 | Time: 18.38s
+Epoch 00620 |`G Loss: 6.1501 | D Loss: 0.3265 | Time: 18.34s
+Epoch 00621 |`G Loss: 5.4186 | D Loss: 0.1012 | Time: 18.33s
+Epoch 00622 |`G Loss: 6.4179 | D Loss: 0.2697 | Time: 18.35s
+Epoch 00623 |`G Loss: 4.8459 | D Loss: 0.2450 | Time: 18.32s
+Epoch 00624 |`G Loss: 6.2463 | D Loss: 0.1463 | Time: 18.29s
+Epoch 00625 |`G Loss: 4.5538 | D Loss: 0.2037 | Time: 18.32s
+Epoch 00626 |`G Loss: 4.9502 | D Loss: 0.1646 | Time: 18.34s
+Epoch 00627 |`G Loss: 5.8538 | D Loss: 0.2172 | Time: 18.38s
+Epoch 00628 |`G Loss: 6.0888 | D Loss: 0.1859 | Time: 18.39s
+Epoch 00629 |`G Loss: 5.6540 | D Loss: 0.1720 | Time: 18.34s
+Epoch 00630 |`G Loss: 5.3082 | D Loss: 0.2020 | Time: 18.38s
+Epoch 00631 |`G Loss: 4.4518 | D Loss: 0.2061 | Time: 18.39s
+Epoch 00632 |`G Loss: 5.7300 | D Loss: 0.1867 | Time: 18.40s
+Epoch 00633 |`G Loss: 4.9143 | D Loss: 0.2450 | Time: 18.44s
+Epoch 00634 |`G Loss: 5.9596 | D Loss: 0.0883 | Time: 18.34s
+Epoch 00635 |`G Loss: 4.7647 | D Loss: 0.1262 | Time: 18.37s
+Epoch 00636 |`G Loss: 4.3885 | D Loss: 0.2407 | Time: 18.23s
+Epoch 00637 |`G Loss: 5.5233 | D Loss: 0.0670 | Time: 18.43s
+Epoch 00638 |`G Loss: 4.6300 | D Loss: 0.7825 | Time: 18.45s
+Epoch 00639 |`G Loss: 5.1816 | D Loss: 0.1945 | Time: 18.41s
+Epoch 00640 |`G Loss: 5.4502 | D Loss: 0.1525 | Time: 18.46s
+Epoch 00641 |`G Loss: 4.2819 | D Loss: 0.2958 | Time: 18.38s
+Epoch 00642 |`G Loss: 3.2386 | D Loss: 0.4389 | Time: 18.44s
+Epoch 00643 |`G Loss: 3.5343 | D Loss: 0.1666 | Time: 18.36s
+Epoch 00644 |`G Loss: 5.4188 | D Loss: 0.2242 | Time: 18.36s
+Epoch 00645 |`G Loss: 6.1518 | D Loss: 0.1693 | Time: 18.36s
+Epoch 00646 |`G Loss: 4.3802 | D Loss: 0.1585 | Time: 18.50s
+Epoch 00647 |`G Loss: 4.6680 | D Loss: 0.1345 | Time: 18.34s
+Epoch 00648 |`G Loss: 4.8578 | D Loss: 0.2418 | Time: 18.33s
+Epoch 00649 |`G Loss: 5.1691 | D Loss: 0.2332 | Time: 18.34s
+Epoch 00650 |`G Loss: 4.1439 | D Loss: 0.3713 | Time: 18.38s
+Epoch 00651 |`G Loss: 5.3372 | D Loss: 0.1619 | Time: 18.33s
+Epoch 00652 |`G Loss: 1.8666 | D Loss: 1.3711 | Time: 18.47s
+Epoch 00653 |`G Loss: 4.7478 | D Loss: 0.2166 | Time: 18.43s
+Epoch 00654 |`G Loss: 6.1417 | D Loss: 0.1159 | Time: 18.42s
+Epoch 00655 |`G Loss: 5.4223 | D Loss: 0.1323 | Time: 18.36s
+Epoch 00656 |`G Loss: 5.7324 | D Loss: 0.3101 | Time: 18.34s
+Epoch 00657 |`G Loss: 5.3958 | D Loss: 0.1393 | Time: 18.42s
+Epoch 00658 |`G Loss: 4.9715 | D Loss: 0.2290 | Time: 18.37s
+Epoch 00659 |`G Loss: 4.1835 | D Loss: 0.1215 | Time: 18.39s
+Epoch 00660 |`G Loss: 4.6400 | D Loss: 0.1476 | Time: 18.27s
+Epoch 00661 |`G Loss: 5.1678 | D Loss: 0.1871 | Time: 18.45s
+Epoch 00662 |`G Loss: 3.2719 | D Loss: 0.4114 | Time: 18.29s
+Epoch 00663 |`G Loss: 4.9573 | D Loss: 0.1717 | Time: 18.40s
+Epoch 00664 |`G Loss: 5.7305 | D Loss: 0.1758 | Time: 18.35s
+Epoch 00665 |`G Loss: 4.1916 | D Loss: 0.2101 | Time: 18.32s
+Epoch 00666 |`G Loss: 4.6369 | D Loss: 0.4103 | Time: 18.46s
+Epoch 00667 |`G Loss: 4.9254 | D Loss: 0.1404 | Time: 18.30s
+Epoch 00668 |`G Loss: 5.2291 | D Loss: 0.2249 | Time: 18.42s
+Epoch 00669 |`G Loss: 5.0199 | D Loss: 0.1975 | Time: 18.24s
+Epoch 00670 |`G Loss: 3.4575 | D Loss: 0.2242 | Time: 18.30s
+Epoch 00671 |`G Loss: 5.5312 | D Loss: 0.1080 | Time: 18.31s
+Epoch 00672 |`G Loss: 5.9214 | D Loss: 0.0505 | Time: 18.36s
+Epoch 00673 |`G Loss: 4.0174 | D Loss: 0.3676 | Time: 18.45s
+Epoch 00674 |`G Loss: 5.0996 | D Loss: 0.1463 | Time: 18.31s
+Epoch 00675 |`G Loss: 5.5208 | D Loss: 0.1703 | Time: 18.38s
+Epoch 00676 |`G Loss: 5.8922 | D Loss: 0.1570 | Time: 18.34s
+Epoch 00677 |`G Loss: 5.2438 | D Loss: 0.2904 | Time: 18.45s
+Epoch 00678 |`G Loss: 4.8050 | D Loss: 0.2704 | Time: 18.33s
+Epoch 00679 |`G Loss: 4.8451 | D Loss: 0.2599 | Time: 18.41s
+Epoch 00680 |`G Loss: 4.4555 | D Loss: 0.1794 | Time: 18.38s
+Epoch 00681 |`G Loss: 6.8842 | D Loss: 0.3137 | Time: 18.47s
+Epoch 00682 |`G Loss: 4.5513 | D Loss: 0.1802 | Time: 18.47s
+Epoch 00683 |`G Loss: 5.0563 | D Loss: 0.2474 | Time: 18.45s
+Epoch 00684 |`G Loss: 4.7362 | D Loss: 0.1152 | Time: 18.43s
+Epoch 00685 |`G Loss: 5.0875 | D Loss: 0.1369 | Time: 18.39s
+Epoch 00686 |`G Loss: 4.2739 | D Loss: 0.3274 | Time: 18.37s
+Epoch 00687 |`G Loss: 5.1244 | D Loss: 0.1105 | Time: 18.37s
+Epoch 00688 |`G Loss: 6.1464 | D Loss: 0.1434 | Time: 18.42s
+Epoch 00689 |`G Loss: 4.0594 | D Loss: 0.3085 | Time: 18.30s
+Epoch 00690 |`G Loss: 4.8041 | D Loss: 0.2601 | Time: 18.42s
+Epoch 00691 |`G Loss: 4.6992 | D Loss: 0.1698 | Time: 18.33s
+Epoch 00692 |`G Loss: 3.6144 | D Loss: 0.4507 | Time: 18.36s
+Epoch 00693 |`G Loss: 5.1016 | D Loss: 0.2059 | Time: 18.39s
+Epoch 00694 |`G Loss: 5.0007 | D Loss: 0.2155 | Time: 18.36s
+Epoch 00695 |`G Loss: 4.8820 | D Loss: 0.1401 | Time: 18.41s
+Epoch 00696 |`G Loss: 5.8901 | D Loss: 0.1880 | Time: 18.41s
+Epoch 00697 |`G Loss: 5.4204 | D Loss: 0.2418 | Time: 18.44s
+Epoch 00698 |`G Loss: 5.5473 | D Loss: 0.0827 | Time: 18.31s
+Epoch 00699 |`G Loss: 3.2453 | D Loss: 0.2543 | Time: 18.43s
+Epoch 00700 |`G Loss: 5.7947 | D Loss: 0.1027 | Time: 18.39s
+
+============================================================
+SAUVEGARDE - Epoch 700
+============================================================
+Images générées sauvegardées
+============================================================
+
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 700)
+Epoch 00701 |`G Loss: 6.2785 | D Loss: 0.1264 | Time: 18.35s
+Epoch 00702 |`G Loss: 4.6801 | D Loss: 0.1892 | Time: 18.44s
+Epoch 00703 |`G Loss: 6.0986 | D Loss: 0.2833 | Time: 18.36s
+Epoch 00704 |`G Loss: 5.3122 | D Loss: 0.2748 | Time: 18.48s
+Epoch 00705 |`G Loss: 4.7149 | D Loss: 0.2989 | Time: 18.32s
+Epoch 00706 |`G Loss: 4.4527 | D Loss: 0.1710 | Time: 18.39s
+Epoch 00707 |`G Loss: 3.5945 | D Loss: 0.4268 | Time: 18.35s
+Epoch 00708 |`G Loss: 5.5816 | D Loss: 0.1578 | Time: 18.41s
+Epoch 00709 |`G Loss: 4.7068 | D Loss: 0.0980 | Time: 18.41s
+Epoch 00710 |`G Loss: 5.2137 | D Loss: 0.2048 | Time: 18.39s
+Epoch 00711 |`G Loss: 5.0493 | D Loss: 0.1273 | Time: 18.27s
+Epoch 00712 |`G Loss: 6.0880 | D Loss: 0.2108 | Time: 18.36s
+Epoch 00713 |`G Loss: 6.2049 | D Loss: 0.0610 | Time: 18.43s
+Epoch 00714 |`G Loss: 6.4536 | D Loss: 0.1192 | Time: 18.36s
+Epoch 00715 |`G Loss: 6.0873 | D Loss: 0.1595 | Time: 18.42s
+Epoch 00716 |`G Loss: 2.7551 | D Loss: 0.7428 | Time: 18.35s
+Epoch 00717 |`G Loss: 5.8812 | D Loss: 0.1371 | Time: 18.41s
+Epoch 00718 |`G Loss: 3.2771 | D Loss: 0.1885 | Time: 18.32s
+Epoch 00719 |`G Loss: 4.8019 | D Loss: 0.1655 | Time: 18.43s
+Epoch 00720 |`G Loss: 5.1977 | D Loss: 0.1831 | Time: 18.35s
+Epoch 00721 |`G Loss: 4.2033 | D Loss: 0.2044 | Time: 18.29s
+Epoch 00722 |`G Loss: 5.9098 | D Loss: 0.1782 | Time: 18.43s
+Epoch 00723 |`G Loss: 4.7423 | D Loss: 0.2095 | Time: 18.38s
+Epoch 00724 |`G Loss: 4.2522 | D Loss: 0.2562 | Time: 18.42s
+Epoch 00725 |`G Loss: 4.4455 | D Loss: 0.2279 | Time: 18.42s
+Epoch 00726 |`G Loss: 5.3349 | D Loss: 0.2252 | Time: 18.43s
+Epoch 00727 |`G Loss: 5.8691 | D Loss: 0.0877 | Time: 18.31s
+Epoch 00728 |`G Loss: 4.8814 | D Loss: 0.1569 | Time: 18.39s
+Epoch 00729 |`G Loss: 5.8659 | D Loss: 0.1659 | Time: 18.36s
+Epoch 00730 |`G Loss: 5.7786 | D Loss: 0.2185 | Time: 18.41s
+Epoch 00731 |`G Loss: 5.3071 | D Loss: 0.1193 | Time: 18.39s
+Epoch 00732 |`G Loss: 4.0905 | D Loss: 0.1886 | Time: 18.35s
+Epoch 00733 |`G Loss: 3.5986 | D Loss: 0.1950 | Time: 18.32s
+Epoch 00734 |`G Loss: 5.8200 | D Loss: 0.1424 | Time: 18.34s
+Epoch 00735 |`G Loss: 2.8086 | D Loss: 2.0293 | Time: 18.48s
+Epoch 00736 |`G Loss: 3.7686 | D Loss: 0.4277 | Time: 18.32s
+Epoch 00737 |`G Loss: 7.0843 | D Loss: 0.1531 | Time: 18.39s
+Epoch 00738 |`G Loss: 5.2601 | D Loss: 0.1317 | Time: 18.39s
+Epoch 00739 |`G Loss: 5.8240 | D Loss: 0.0973 | Time: 18.46s
+Epoch 00740 |`G Loss: 5.6476 | D Loss: 0.1675 | Time: 18.51s
+Epoch 00741 |`G Loss: 5.5910 | D Loss: 0.2348 | Time: 18.35s
+Epoch 00742 |`G Loss: 5.3943 | D Loss: 0.1752 | Time: 18.52s
+Epoch 00743 |`G Loss: 4.8298 | D Loss: 0.2335 | Time: 18.33s
+Epoch 00744 |`G Loss: 6.0048 | D Loss: 0.3032 | Time: 18.36s
+Epoch 00745 |`G Loss: 5.3813 | D Loss: 0.2338 | Time: 18.30s
+Epoch 00746 |`G Loss: 4.4654 | D Loss: 0.2972 | Time: 18.39s
+Epoch 00747 |`G Loss: 4.6510 | D Loss: 0.1442 | Time: 18.31s
+Epoch 00748 |`G Loss: 5.1017 | D Loss: 0.2056 | Time: 18.52s
+Epoch 00749 |`G Loss: 6.2900 | D Loss: 0.1624 | Time: 18.54s
+Epoch 00750 |`G Loss: 5.8093 | D Loss: 0.1726 | Time: 18.31s
+Epoch 00751 |`G Loss: 5.4260 | D Loss: 0.2193 | Time: 18.52s
+Epoch 00752 |`G Loss: 5.3319 | D Loss: 0.1662 | Time: 18.34s
+Epoch 00753 |`G Loss: 4.7970 | D Loss: 0.1633 | Time: 18.46s
+Epoch 00754 |`G Loss: 5.1135 | D Loss: 0.1450 | Time: 18.35s
+Epoch 00755 |`G Loss: 4.2329 | D Loss: 0.1859 | Time: 18.43s
+Epoch 00756 |`G Loss: 5.9072 | D Loss: 0.1286 | Time: 18.38s
+Epoch 00757 |`G Loss: 3.9430 | D Loss: 0.2825 | Time: 18.38s
+Epoch 00758 |`G Loss: 5.6257 | D Loss: 0.0972 | Time: 18.42s
+Epoch 00759 |`G Loss: 5.1331 | D Loss: 0.2288 | Time: 18.32s
+Epoch 00760 |`G Loss: 6.2171 | D Loss: 0.2660 | Time: 18.35s
+Epoch 00761 |`G Loss: 4.5702 | D Loss: 0.1992 | Time: 18.28s
+Epoch 00762 |`G Loss: 5.5657 | D Loss: 0.1669 | Time: 18.40s
+Epoch 00763 |`G Loss: 4.9715 | D Loss: 0.1615 | Time: 18.30s
+Epoch 00764 |`G Loss: 3.8940 | D Loss: 0.1728 | Time: 18.43s
+Epoch 00765 |`G Loss: 5.3762 | D Loss: 0.1449 | Time: 18.39s
+Epoch 00766 |`G Loss: 6.0213 | D Loss: 0.2044 | Time: 18.43s
+Epoch 00767 |`G Loss: 5.0936 | D Loss: 0.1938 | Time: 18.38s
+Epoch 00768 |`G Loss: 3.7112 | D Loss: 0.2394 | Time: 18.46s
+Epoch 00769 |`G Loss: 6.2154 | D Loss: 0.1842 | Time: 18.44s
+Epoch 00770 |`G Loss: 5.0353 | D Loss: 0.2884 | Time: 18.29s
+Epoch 00771 |`G Loss: 6.5715 | D Loss: 0.3296 | Time: 18.43s
+Epoch 00772 |`G Loss: 4.8382 | D Loss: 0.1827 | Time: 18.38s
+Epoch 00773 |`G Loss: 6.4432 | D Loss: 0.1631 | Time: 18.47s
+Epoch 00774 |`G Loss: 5.5004 | D Loss: 0.1337 | Time: 18.27s
+Epoch 00775 |`G Loss: 5.9970 | D Loss: 0.2380 | Time: 18.32s
+Epoch 00776 |`G Loss: 6.4797 | D Loss: 0.1315 | Time: 18.31s
+Epoch 00777 |`G Loss: 5.9942 | D Loss: 0.1423 | Time: 18.39s
+Epoch 00778 |`G Loss: 6.1621 | D Loss: 0.2683 | Time: 18.36s
+Epoch 00779 |`G Loss: 4.0592 | D Loss: 1.9043 | Time: 18.33s
+Epoch 00780 |`G Loss: 5.4580 | D Loss: 0.1600 | Time: 18.46s
+Epoch 00781 |`G Loss: 4.9814 | D Loss: 0.1587 | Time: 18.41s
+Epoch 00782 |`G Loss: 5.8253 | D Loss: 0.1335 | Time: 18.46s
+Epoch 00783 |`G Loss: 4.3323 | D Loss: 0.1950 | Time: 18.36s
+Epoch 00784 |`G Loss: 5.9551 | D Loss: 0.1545 | Time: 18.47s
+Epoch 00785 |`G Loss: 5.5242 | D Loss: 0.1825 | Time: 18.38s
+Epoch 00786 |`G Loss: 3.6610 | D Loss: 0.1794 | Time: 18.39s
+Epoch 00787 |`G Loss: 5.7447 | D Loss: 0.2192 | Time: 18.45s
+Epoch 00788 |`G Loss: 3.9207 | D Loss: 0.3280 | Time: 18.33s
+Epoch 00789 |`G Loss: 4.9497 | D Loss: 0.0967 | Time: 18.45s
+Epoch 00790 |`G Loss: 4.6308 | D Loss: 0.1945 | Time: 18.41s
+Epoch 00791 |`G Loss: 5.3994 | D Loss: 0.1298 | Time: 18.42s
+Epoch 00792 |`G Loss: 4.9646 | D Loss: 0.1732 | Time: 18.44s
+Epoch 00793 |`G Loss: 4.3527 | D Loss: 0.3176 | Time: 18.46s
+Epoch 00794 |`G Loss: 4.2826 | D Loss: 0.1383 | Time: 18.34s
+Epoch 00795 |`G Loss: 5.1271 | D Loss: 0.1975 | Time: 18.43s
+Epoch 00796 |`G Loss: 4.6073 | D Loss: 0.2748 | Time: 18.41s
+Epoch 00797 |`G Loss: 4.8668 | D Loss: 0.2101 | Time: 18.41s
+Epoch 00798 |`G Loss: 5.7463 | D Loss: 0.0952 | Time: 18.39s
+Epoch 00799 |`G Loss: 5.4899 | D Loss: 0.1824 | Time: 18.40s
+Epoch 00800 |`G Loss: 4.6270 | D Loss: 0.9594 | Time: 18.50s
+
+============================================================
+SAUVEGARDE - Epoch 800
+============================================================
+Images générées sauvegardées
+
+⚠️  ATTENTION - Problèmes détectés :
+  - Possible mode collapse : G loss très élevée
+============================================================
+
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 800)
+Epoch 00801 |`G Loss: 10.2984 | D Loss: 1.2602 | Time: 18.37s
+Epoch 00802 |`G Loss: 6.0089 | D Loss: 0.1340 | Time: 18.41s
+Epoch 00803 |`G Loss: 5.2672 | D Loss: 0.1694 | Time: 18.42s
+Epoch 00804 |`G Loss: 5.2815 | D Loss: 0.1451 | Time: 18.35s
+Epoch 00805 |`G Loss: 5.3784 | D Loss: 0.2403 | Time: 18.45s
+Epoch 00806 |`G Loss: 5.6017 | D Loss: 0.2018 | Time: 18.38s
+Epoch 00807 |`G Loss: 3.6380 | D Loss: 0.3514 | Time: 18.48s
+Epoch 00808 |`G Loss: 4.3132 | D Loss: 1.2405 | Time: 18.37s
+Epoch 00809 |`G Loss: 7.0906 | D Loss: 0.1396 | Time: 18.42s
+Epoch 00810 |`G Loss: 6.2133 | D Loss: 0.1781 | Time: 18.43s
+Epoch 00811 |`G Loss: 4.6931 | D Loss: 0.1030 | Time: 18.46s
+Epoch 00812 |`G Loss: 4.3953 | D Loss: 0.2641 | Time: 18.47s
+Epoch 00813 |`G Loss: 4.9979 | D Loss: 0.1490 | Time: 18.43s
+Epoch 00814 |`G Loss: 6.6993 | D Loss: 0.1961 | Time: 18.40s
+Epoch 00815 |`G Loss: 4.2879 | D Loss: 0.2219 | Time: 18.41s
+Epoch 00816 |`G Loss: 5.7595 | D Loss: 0.1792 | Time: 18.55s
+Epoch 00817 |`G Loss: 5.0353 | D Loss: 0.1013 | Time: 18.46s
+Epoch 00818 |`G Loss: 5.5527 | D Loss: 0.1868 | Time: 18.46s
+Epoch 00819 |`G Loss: 5.9533 | D Loss: 0.1417 | Time: 18.38s
+Epoch 00820 |`G Loss: 6.3208 | D Loss: 0.0797 | Time: 18.40s
+Epoch 00821 |`G Loss: 5.0983 | D Loss: 0.1548 | Time: 18.41s
+Epoch 00822 |`G Loss: 7.1631 | D Loss: 0.2677 | Time: 18.51s
+Epoch 00823 |`G Loss: 5.2595 | D Loss: 0.1647 | Time: 18.36s
+Epoch 00824 |`G Loss: 16.1596 | D Loss: 9.5411 | Time: 18.39s
+Epoch 00825 |`G Loss: 4.9696 | D Loss: 0.2082 | Time: 18.35s
+Epoch 00826 |`G Loss: 3.7209 | D Loss: 0.2531 | Time: 18.39s
+Epoch 00827 |`G Loss: 5.8245 | D Loss: 0.0803 | Time: 18.41s
+Epoch 00828 |`G Loss: 4.0805 | D Loss: 0.2292 | Time: 18.32s
+Epoch 00829 |`G Loss: 5.8959 | D Loss: 0.1338 | Time: 18.44s
+Epoch 00830 |`G Loss: 4.9877 | D Loss: 0.1346 | Time: 18.38s
+Epoch 00831 |`G Loss: 5.8035 | D Loss: 0.3172 | Time: 18.44s
+Epoch 00832 |`G Loss: 5.7923 | D Loss: 0.1188 | Time: 18.39s
+Epoch 00833 |`G Loss: 4.8689 | D Loss: 0.1849 | Time: 18.44s
+Epoch 00834 |`G Loss: 4.7583 | D Loss: 0.2186 | Time: 18.40s
+Epoch 00835 |`G Loss: 4.9303 | D Loss: 0.1297 | Time: 18.37s
+Epoch 00836 |`G Loss: 4.7380 | D Loss: 0.1684 | Time: 18.50s
+Epoch 00837 |`G Loss: 4.5213 | D Loss: 0.3778 | Time: 18.31s
+Epoch 00838 |`G Loss: 3.3383 | D Loss: 0.4759 | Time: 18.41s
+Epoch 00839 |`G Loss: 5.6631 | D Loss: 0.1971 | Time: 18.29s
+Epoch 00840 |`G Loss: 5.3448 | D Loss: 0.1009 | Time: 18.37s
+Epoch 00841 |`G Loss: 5.7034 | D Loss: 0.2264 | Time: 18.34s
+Epoch 00842 |`G Loss: 6.5960 | D Loss: 0.1764 | Time: 18.38s
+Epoch 00843 |`G Loss: 5.2916 | D Loss: 0.1615 | Time: 18.39s
+Epoch 00844 |`G Loss: 5.1894 | D Loss: 0.0978 | Time: 18.38s
+Epoch 00845 |`G Loss: 4.4419 | D Loss: 0.1579 | Time: 18.44s
+Epoch 00846 |`G Loss: 5.1593 | D Loss: 0.1799 | Time: 18.33s
+Epoch 00847 |`G Loss: 6.1716 | D Loss: 0.1448 | Time: 18.35s
+Epoch 00848 |`G Loss: 4.6331 | D Loss: 0.1674 | Time: 18.37s
+Epoch 00849 |`G Loss: 5.9396 | D Loss: 0.2183 | Time: 18.49s
+Epoch 00850 |`G Loss: 5.2065 | D Loss: 0.3762 | Time: 18.46s
+Epoch 00851 |`G Loss: 4.9424 | D Loss: 0.3245 | Time: 18.39s
+Epoch 00852 |`G Loss: 5.1173 | D Loss: 0.0681 | Time: 18.34s
+Epoch 00853 |`G Loss: 5.5427 | D Loss: 0.1891 | Time: 18.46s
+Epoch 00854 |`G Loss: 5.7495 | D Loss: 0.1645 | Time: 18.47s
+Epoch 00855 |`G Loss: 5.6596 | D Loss: 0.1698 | Time: 18.42s
+Epoch 00856 |`G Loss: 5.7527 | D Loss: 0.8673 | Time: 18.47s
+Epoch 00857 |`G Loss: 4.8435 | D Loss: 0.1905 | Time: 18.32s
+Epoch 00858 |`G Loss: 5.9470 | D Loss: 0.2341 | Time: 18.42s
+Epoch 00859 |`G Loss: 5.9892 | D Loss: 0.1293 | Time: 18.34s
+Epoch 00860 |`G Loss: 4.2353 | D Loss: 0.4432 | Time: 18.47s
+Epoch 00861 |`G Loss: 4.6328 | D Loss: 0.2429 | Time: 18.38s
+Epoch 00862 |`G Loss: 6.2894 | D Loss: 0.1333 | Time: 18.40s
+Epoch 00863 |`G Loss: 5.9789 | D Loss: 0.1575 | Time: 18.38s
+Epoch 00864 |`G Loss: 4.7422 | D Loss: 0.2098 | Time: 18.31s
+Epoch 00865 |`G Loss: 5.1104 | D Loss: 0.1429 | Time: 18.58s
+Epoch 00866 |`G Loss: 4.1120 | D Loss: 0.3575 | Time: 18.91s
+Epoch 00867 |`G Loss: 4.7459 | D Loss: 0.1348 | Time: 18.89s
+Epoch 00868 |`G Loss: 5.9240 | D Loss: 0.1367 | Time: 19.49s
+Epoch 00869 |`G Loss: 4.9075 | D Loss: 0.1102 | Time: 18.90s
+Epoch 00870 |`G Loss: 4.9287 | D Loss: 0.2393 | Time: 18.27s
+Epoch 00871 |`G Loss: 4.7760 | D Loss: 0.2967 | Time: 18.41s
+Epoch 00872 |`G Loss: 5.9837 | D Loss: 0.2044 | Time: 18.35s
+Epoch 00873 |`G Loss: 4.5297 | D Loss: 0.2146 | Time: 18.42s
+Epoch 00874 |`G Loss: 4.6437 | D Loss: 0.1455 | Time: 18.36s
+Epoch 00875 |`G Loss: 6.3735 | D Loss: 0.2014 | Time: 18.37s
+Epoch 00876 |`G Loss: 5.8691 | D Loss: 0.1766 | Time: 18.30s
+Epoch 00877 |`G Loss: 6.0215 | D Loss: 0.2578 | Time: 18.36s
+Epoch 00878 |`G Loss: 6.3629 | D Loss: 0.1470 | Time: 18.42s
+Epoch 00879 |`G Loss: 5.7538 | D Loss: 0.1447 | Time: 18.40s
+Epoch 00880 |`G Loss: 5.2404 | D Loss: 0.1752 | Time: 18.45s
+Epoch 00881 |`G Loss: 5.8541 | D Loss: 0.1640 | Time: 18.33s
+Epoch 00882 |`G Loss: 6.6893 | D Loss: 0.1091 | Time: 18.43s
+Epoch 00883 |`G Loss: 5.3562 | D Loss: 0.1903 | Time: 18.36s
+Epoch 00884 |`G Loss: 5.8284 | D Loss: 0.1078 | Time: 18.37s
+Epoch 00885 |`G Loss: 4.6589 | D Loss: 0.0863 | Time: 18.38s
+Epoch 00886 |`G Loss: 5.6532 | D Loss: 0.1491 | Time: 18.32s
+Epoch 00887 |`G Loss: 4.9980 | D Loss: 0.1432 | Time: 18.35s
+Epoch 00888 |`G Loss: 4.7776 | D Loss: 0.1262 | Time: 18.45s
+Epoch 00889 |`G Loss: 6.8418 | D Loss: 0.3274 | Time: 18.25s
+Epoch 00890 |`G Loss: 6.2987 | D Loss: 0.1216 | Time: 18.40s
+Epoch 00891 |`G Loss: 5.5206 | D Loss: 0.0944 | Time: 18.47s
+Epoch 00892 |`G Loss: 5.8401 | D Loss: 0.0940 | Time: 18.39s
+Epoch 00893 |`G Loss: 5.5041 | D Loss: 0.1170 | Time: 18.50s
+Epoch 00894 |`G Loss: 5.6176 | D Loss: 0.1572 | Time: 18.37s
+Epoch 00895 |`G Loss: 5.6176 | D Loss: 0.1996 | Time: 18.35s
+Epoch 00896 |`G Loss: 6.1217 | D Loss: 0.1413 | Time: 18.36s
+Epoch 00897 |`G Loss: 4.9740 | D Loss: 0.2403 | Time: 18.39s
+Epoch 00898 |`G Loss: 6.4379 | D Loss: 0.1685 | Time: 18.47s
+Epoch 00899 |`G Loss: 6.8658 | D Loss: 0.1933 | Time: 18.34s
+Epoch 00900 |`G Loss: 5.1453 | D Loss: 0.2033 | Time: 18.40s
+
+============================================================
+SAUVEGARDE - Epoch 900
+============================================================
+Images générées sauvegardées
+
+⚠️  ATTENTION - Problèmes détectés :
+  - Possible mode collapse : G loss très élevée
+============================================================
+
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 900)
+Epoch 00901 |`G Loss: 4.9774 | D Loss: 0.1420 | Time: 18.29s
+Epoch 00902 |`G Loss: 6.0952 | D Loss: 0.1171 | Time: 18.38s
+Epoch 00903 |`G Loss: 6.4858 | D Loss: 0.2257 | Time: 18.33s
+Epoch 00904 |`G Loss: 5.7167 | D Loss: 0.1910 | Time: 18.46s
+Epoch 00905 |`G Loss: 4.8670 | D Loss: 0.2018 | Time: 18.41s
+Epoch 00906 |`G Loss: 5.3814 | D Loss: 0.2106 | Time: 18.40s
+Epoch 00907 |`G Loss: 5.6896 | D Loss: 0.1823 | Time: 18.51s
+Epoch 00908 |`G Loss: 6.2037 | D Loss: 0.1726 | Time: 18.36s
+Epoch 00909 |`G Loss: 7.9981 | D Loss: 0.2666 | Time: 18.45s
+Epoch 00910 |`G Loss: 4.9305 | D Loss: 0.1454 | Time: 18.39s
+Epoch 00911 |`G Loss: 4.9144 | D Loss: 0.1288 | Time: 18.52s
+Epoch 00912 |`G Loss: 4.6263 | D Loss: 0.1744 | Time: 18.38s
+Epoch 00913 |`G Loss: 6.3056 | D Loss: 0.1203 | Time: 18.40s
+Epoch 00914 |`G Loss: 7.2208 | D Loss: 0.2355 | Time: 18.37s
+Epoch 00915 |`G Loss: 4.8875 | D Loss: 1.6627 | Time: 18.38s
+Epoch 00916 |`G Loss: 5.0310 | D Loss: 0.1187 | Time: 18.45s
+Epoch 00917 |`G Loss: 1.6367 | D Loss: 2.8421 | Time: 18.44s
+Epoch 00918 |`G Loss: 6.4509 | D Loss: 0.1185 | Time: 18.46s
+Epoch 00919 |`G Loss: 5.1866 | D Loss: 0.2437 | Time: 18.39s
+Epoch 00920 |`G Loss: 5.8387 | D Loss: 0.3683 | Time: 18.47s
+Epoch 00921 |`G Loss: 4.5607 | D Loss: 0.1799 | Time: 18.33s
+Epoch 00922 |`G Loss: 5.6791 | D Loss: 0.0850 | Time: 18.37s
+Epoch 00923 |`G Loss: 6.1050 | D Loss: 0.3053 | Time: 18.50s
+Epoch 00924 |`G Loss: 5.5665 | D Loss: 0.1257 | Time: 18.45s
+Epoch 00925 |`G Loss: 5.9983 | D Loss: 0.1685 | Time: 18.47s
+Epoch 00926 |`G Loss: 5.2688 | D Loss: 0.1815 | Time: 18.42s
+Epoch 00927 |`G Loss: 5.8255 | D Loss: 0.1948 | Time: 18.50s
+Epoch 00928 |`G Loss: 7.1818 | D Loss: 0.1274 | Time: 18.42s
+Epoch 00929 |`G Loss: 7.2331 | D Loss: 0.2035 | Time: 18.46s
+Epoch 00930 |`G Loss: 6.6534 | D Loss: 0.1014 | Time: 18.86s
+Epoch 00931 |`G Loss: 5.7861 | D Loss: 0.1751 | Time: 18.98s
+Epoch 00932 |`G Loss: 4.0721 | D Loss: 0.2076 | Time: 19.19s
+Epoch 00933 |`G Loss: 6.8200 | D Loss: 0.2270 | Time: 19.83s
+Epoch 00934 |`G Loss: 4.3987 | D Loss: 0.1711 | Time: 18.25s
+Epoch 00935 |`G Loss: 4.9435 | D Loss: 0.2587 | Time: 18.34s
+Epoch 00936 |`G Loss: 5.4831 | D Loss: 0.1608 | Time: 18.40s
+Epoch 00937 |`G Loss: 5.4473 | D Loss: 0.1695 | Time: 18.39s
+Epoch 00938 |`G Loss: 5.4327 | D Loss: 0.1441 | Time: 18.43s
+Epoch 00939 |`G Loss: 4.7770 | D Loss: 0.1875 | Time: 18.33s
+Epoch 00940 |`G Loss: 6.5812 | D Loss: 0.1417 | Time: 18.48s
+Epoch 00941 |`G Loss: 5.7554 | D Loss: 0.1716 | Time: 18.28s
+Epoch 00942 |`G Loss: 7.0448 | D Loss: 0.1827 | Time: 18.42s
+Epoch 00943 |`G Loss: 4.0309 | D Loss: 0.3268 | Time: 18.32s
+Epoch 00944 |`G Loss: 6.3149 | D Loss: 0.1481 | Time: 18.41s
+Epoch 00945 |`G Loss: 4.9314 | D Loss: 0.2551 | Time: 18.31s
+Epoch 00946 |`G Loss: 4.8137 | D Loss: 0.0821 | Time: 18.29s
+Epoch 00947 |`G Loss: 6.4399 | D Loss: 0.0912 | Time: 18.32s
+Epoch 00948 |`G Loss: 5.4598 | D Loss: 0.2436 | Time: 18.30s
+Epoch 00949 |`G Loss: 4.9628 | D Loss: 0.2509 | Time: 18.55s
+Epoch 00950 |`G Loss: 3.4552 | D Loss: 0.2764 | Time: 18.33s
+Epoch 00951 |`G Loss: 5.3781 | D Loss: 0.1593 | Time: 18.47s
+Epoch 00952 |`G Loss: 6.1529 | D Loss: 0.0848 | Time: 18.27s
+Epoch 00953 |`G Loss: 4.6975 | D Loss: 0.2999 | Time: 18.41s
+Epoch 00954 |`G Loss: 4.7061 | D Loss: 0.2058 | Time: 18.27s
+Epoch 00955 |`G Loss: 5.4027 | D Loss: 0.1877 | Time: 18.48s
+Epoch 00956 |`G Loss: 6.9458 | D Loss: 0.1907 | Time: 18.39s
+Epoch 00957 |`G Loss: 5.7577 | D Loss: 0.1478 | Time: 18.36s
+Epoch 00958 |`G Loss: 5.9737 | D Loss: 0.1593 | Time: 18.39s
+Epoch 00959 |`G Loss: 4.9484 | D Loss: 0.1624 | Time: 18.32s
+Epoch 00960 |`G Loss: 5.9819 | D Loss: 0.1630 | Time: 18.45s
+Epoch 00961 |`G Loss: 5.2037 | D Loss: 0.2386 | Time: 18.40s
+Epoch 00962 |`G Loss: 6.6011 | D Loss: 0.0938 | Time: 18.55s
+Epoch 00963 |`G Loss: 5.8360 | D Loss: 0.2409 | Time: 18.35s
+Epoch 00964 |`G Loss: 5.4778 | D Loss: 0.1077 | Time: 18.44s
+Epoch 00965 |`G Loss: 6.4106 | D Loss: 0.1240 | Time: 18.35s
+Epoch 00966 |`G Loss: 4.7760 | D Loss: 0.1273 | Time: 18.41s
+Epoch 00967 |`G Loss: 4.6564 | D Loss: 0.1798 | Time: 18.85s
+Epoch 00968 |`G Loss: 4.1021 | D Loss: 0.2650 | Time: 18.97s
+Epoch 00969 |`G Loss: 5.4040 | D Loss: 0.1002 | Time: 20.33s
+Epoch 00970 |`G Loss: 6.2290 | D Loss: 0.2877 | Time: 19.73s
+Epoch 00971 |`G Loss: 5.2872 | D Loss: 0.1559 | Time: 18.25s
+Epoch 00972 |`G Loss: 5.6574 | D Loss: 0.0673 | Time: 18.30s
+Epoch 00973 |`G Loss: 5.1444 | D Loss: 0.2019 | Time: 18.44s
+Epoch 00974 |`G Loss: 5.6864 | D Loss: 0.0488 | Time: 18.44s
+Epoch 00975 |`G Loss: 5.3899 | D Loss: 0.1831 | Time: 18.49s
+Epoch 00976 |`G Loss: 4.9837 | D Loss: 0.1190 | Time: 18.49s
+Epoch 00977 |`G Loss: 5.1565 | D Loss: 0.1612 | Time: 18.33s
+Epoch 00978 |`G Loss: 4.2795 | D Loss: 0.3183 | Time: 18.45s
+Epoch 00979 |`G Loss: 4.1615 | D Loss: 0.2270 | Time: 18.33s
+Epoch 00980 |`G Loss: 5.4571 | D Loss: 0.2399 | Time: 18.48s
+Epoch 00981 |`G Loss: 8.2066 | D Loss: 0.1729 | Time: 18.26s
+Epoch 00982 |`G Loss: 5.7922 | D Loss: 0.1231 | Time: 18.38s
+Epoch 00983 |`G Loss: 3.7079 | D Loss: 0.5126 | Time: 18.42s
+Epoch 00984 |`G Loss: 6.0529 | D Loss: 0.1747 | Time: 18.39s
+Epoch 00985 |`G Loss: 5.6022 | D Loss: 0.2063 | Time: 18.65s
+Epoch 00986 |`G Loss: 6.2222 | D Loss: 0.1125 | Time: 18.78s
+Epoch 00987 |`G Loss: 4.0492 | D Loss: 0.2801 | Time: 19.78s
+Epoch 00988 |`G Loss: 4.1437 | D Loss: 0.4308 | Time: 20.14s
+Epoch 00989 |`G Loss: 4.9605 | D Loss: 0.2169 | Time: 18.57s
+Epoch 00990 |`G Loss: 6.3013 | D Loss: 0.1078 | Time: 18.17s
+Epoch 00991 |`G Loss: 6.2097 | D Loss: 0.2405 | Time: 18.27s
+Epoch 00992 |`G Loss: 4.0760 | D Loss: 0.2797 | Time: 18.31s
+Epoch 00993 |`G Loss: 3.7286 | D Loss: 0.4926 | Time: 18.35s
+Epoch 00994 |`G Loss: 4.9288 | D Loss: 0.5042 | Time: 18.31s
+Epoch 00995 |`G Loss: 5.6353 | D Loss: 0.1497 | Time: 18.48s
+Epoch 00996 |`G Loss: 5.1307 | D Loss: 0.1663 | Time: 18.39s
+Epoch 00997 |`G Loss: 6.0867 | D Loss: 0.3314 | Time: 18.33s
+Epoch 00998 |`G Loss: 4.2738 | D Loss: 0.1362 | Time: 18.50s
+Epoch 00999 |`G Loss: 6.6331 | D Loss: 0.2228 | Time: 18.42s
+Epoch 01000 |`G Loss: 4.7976 | D Loss: 0.1625 | Time: 18.47s
+
+============================================================
+SAUVEGARDE - Epoch 1000
+============================================================
+Images générées sauvegardées
+
+⚠️  ATTENTION - Problèmes détectés :
+  - Possible mode collapse : G loss très élevée
+============================================================
+
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Modèles sauvegardés (epoch 1000)
+
+============================================================
+ENTRAÎNEMENT TERMINÉ
+============================================================
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+
+Modèles finaux sauvegardés
+Historique d'entraînement sauvegardé dans outputs//training_history.npz
+
+Fichiers créés :
+  - Modèles : outputs/checkpoints//
+  - Images : outputs/generated_images//
+  - Graphiques : outputs/plots//
