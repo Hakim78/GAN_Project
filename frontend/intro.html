@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Génératif</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            overflow: hidden;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        #intro-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            z-index: 9999;
+        }
+
+        #intro-text {
+            font-size: 10vmin;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .letter {
+            display: inline-block;
+            background: linear-gradient(135deg, #8A2BE2, #00E5FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 30px rgba(138, 43, 226, 0.8));
+        }
+
+        .version-badge {
+            display: inline-block;
+            padding: 0.3em 0.6em;
+            margin-left: 0.5em;
+            font-size: 0.5em;
+            background: linear-gradient(135deg, #8A2BE2, #00E5FF);
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        #particles-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="intro-container">
+        <canvas id="particles-canvas"></canvas>
+        <div id="intro-text">
+            <span class="letter">G</span><span class="letter">A</span><span class="letter">N</span>
+            <span class="version-badge" id="version">V1</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // Particules canvas
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = 100;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = (Math.random() - 0.5) * 2;
+                this.speedY = (Math.random() - 0.5) * 2;
+                this.opacity = Math.random() * 0.5 + 0.3;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+
+            draw() {
+                ctx.fillStyle = `rgba(138, 43, 226, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = `rgba(0, 229, 255, ${this.opacity * 0.5})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * 0.5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        animateParticles();
+
+        // Animation GSAP
+        const tl = gsap.timeline({
+            onComplete: () => {
+                setTimeout(() => {
+                    document.getElementById('intro-container').classList.add('fade-out');
+                    setTimeout(() => {
+                        window.location.href = 'http://localhost:8501';
+                    }, 800);
+                }, 500);
+            }
+        });
+
+        const letters = document.querySelectorAll('.letter');
+        const versionBadge = document.getElementById('version');
+
+        tl.to('#intro-text', {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            ease: 'power2.out'
+        })
+        .to(letters, {
+            y: -20,
+            stagger: 0.1,
+            duration: 0.5,
+            ease: 'back.out(2)'
+        }, '-=0.4')
+        .to(versionBadge, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.3
+        }, '-=0.2')
+        .to(versionBadge, {
+            innerHTML: 'V2',
+            duration: 0.1
+        }, '+=0.5')
+        .to(versionBadge, {
+            scale: 1.2,
+            duration: 0.2,
+            yoyo: true,
+            repeat: 1
+        }, '-=0.1')
+        .to(versionBadge, {
+            innerHTML: 'V3',
+            duration: 0.1
+        }, '+=0.5')
+        .to(versionBadge, {
+            scale: 1.2,
+            duration: 0.2,
+            yoyo: true,
+            repeat: 1
+        }, '-=0.1')
+        .to('#intro-text', {
+            scale: 1.1,
+            duration: 0.6,
+            ease: 'elastic.out(1, 0.3)'
+        }, '+=0.3');
+    </script>
+</body>
+</html>
